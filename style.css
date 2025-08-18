@@ -681,6 +681,10 @@ button[aria-expanded="true"]+.dropdown-menu {
   padding: 64px 0 80px;
 }
 
+.intro{
+  max-width: 75%;
+}
+
 
 /* Stories Header */
 .stories .head {
@@ -696,6 +700,7 @@ button[aria-expanded="true"]+.dropdown-menu {
     justify-content: space-between;
     align-items: flex-start;
   }
+
 }
 
 .stories .title {
@@ -703,8 +708,8 @@ button[aria-expanded="true"]+.dropdown-menu {
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--purple);
-  font-size: clamp(36px, 5.5vw, 64px);
-  line-height: 1.05;
+  font-size: 3.75rem;
+  line-height: 1.25;
 }
 
 .stories .sub {
@@ -1377,4 +1382,11 @@ button[aria-expanded="true"]+.dropdown-menu {
     width: 100%;
     max-width: unset;
   }
+}
+
+@media (max-width: 768px) {
+    .intro{
+  max-width: 100%;
+}
+
 }
