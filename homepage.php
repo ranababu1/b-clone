@@ -40,6 +40,11 @@ get_header();
       </div>
       <div class="banner-content-right">
         <div class="banner-image-wrapper">
+          <button id="openPopup" class="play-button" type="button">
+            <svg width="28" height="28" role="img" aria-label="play-fill">
+              <use href="/wp-content/themes/clever/assets/images/sprites.svg#play-fill"></use>
+            </svg>
+          </button>
           <?php
           $hero_image_url = $hero_section['hero_banner_image'] ?? '';
           if (!empty($hero_image_url)) {
@@ -48,11 +53,7 @@ get_header();
             echo '<div>Image not available</div>';
           }
           ?>
-          <button id="openPopup" class="play-button" type="button">
-            <svg width="28" height="28" role="img" aria-label="play-fill">
-              <use href="/wp-content/themes/clever/assets/images/sprites.svg#play-fill"></use>
-            </svg>
-          </button>
+          
         </div>
       </div>
     </div>
