@@ -75,12 +75,12 @@ get_header();
     <!-- Sticky Navigation Menu -->
     <div class="sticky-navbar" id="navbar">
       <ul>
-        <li><a href="#section1">Braze Data Platform</a></li>
-        <li><a href="#section2">BrazeAI™</a></li>
-        <li><a href="#section3">Journey Orchestration</a></li>
-        <li><a href="#section4">Cross-Channel Messaging</a></li>
-        <li><a href="#section5">Real-time Execution</a></li>
-        <li><a href="#section6">Scale Without Fail</a></li>
+        <li><a href="#section1"><?php echo acf_text('tab_title_1'); ?></a></li>
+        <li><a href="#section2"><?php echo acf_text('tab_title_2'); ?></a></li>
+        <li><a href="#section3"><?php echo acf_text('tab_title_3'); ?></a></li>
+        <li><a href="#section4"><?php echo acf_text('tab_title_4'); ?></a></li>
+        <li><a href="#section5"><?php echo acf_text('tab_title_5'); ?></a></li>
+        <li><a href="#section6"><?php echo acf_text('tab_title_6'); ?></a></li>
       </ul>
     </div>
     <!-- Content Sections -->
@@ -90,14 +90,14 @@ get_header();
           <div class="sticky-copy-block">
             <p><svg width="24" height="24" role="img" aria-label="stars-01">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
-              </svg> <strong>Data done right.</strong></p>
-            <h3>Start building stronger first-party relationships.</h3>
-            <p>Customers are giving you their data. What are you giving them in return? How about highly personalized, customized experiences? With Braze, you can.</p>
-            <a class="round-cta" href="#" title="Braze Data Platform">Braze Data Platform</a>
+              </svg> <strong><?php echo acf_text('tab2_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab2_heading'); ?></h3>
+            <p><?php echo acf_text('tab2_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab2_cta_url'); ?>" title="Braze Data Platform"><?php echo acf_text('tab2_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab2_img = acf_img_src('tab2_image', $fallback_img); if ($tab2_img) { echo '<img src="'.$tab2_img.'" alt="Tab 2 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -107,14 +107,14 @@ get_header();
           <div class="sticky-copy-block">
             <p><svg width="24" height="24" role="img" aria-label="stars-01">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
-              </svg> <strong>AI for Growth.</strong></p>
-            <h3>Employ BrazeAI™, the world’s smartest marketing advisor.</h3>
-            <p>As you learn Braze, BrazeAI™ learns your brand, helping you to create on-brand content and creative, personalize journeys, and double down on winning strategies that multiply returns.</p>
-            <a class="round-cta" href="#" title="BrazeAI">BrazeAI™</a>
+              </svg> <strong><?php echo acf_text('tab3_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab3_heading'); ?></h3>
+            <p><?php echo acf_text('tab3_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab3_cta_url'); ?>" title="BrazeAI"><?php echo acf_text('tab3_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab3_img = acf_img_src('tab3_image', $fallback_img); if ($tab3_img) { echo '<img src="'.$tab3_img.'" alt="Tab 3 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -124,14 +124,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="light-purple"><svg width="24" height="24" role="img" aria-label="zap">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
-              </svg> <strong>Build a Better Path.</strong></p>
-            <h3>Manage campaigns. Move to journey orchestration.</h3>
-            <p>No matter where you are today, highly-intelligent, always-on journey orchestration is where you’ll want to be tomorrow. See how Braze is helping brands of all sizes modernize their marketing approach.</p>
-            <a class="round-cta" href="#" title="Journey Orchestration">Journey Orchestration</a>
+              </svg> <strong><?php echo acf_text('tab4_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab4_heading'); ?></h3>
+            <p><?php echo acf_text('tab4_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab4_cta_url'); ?>" title="Journey Orchestration"><?php echo acf_text('tab4_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab4_img = acf_img_src('tab4_image', $fallback_img); if ($tab4_img) { echo '<img src="'.$tab4_img.'" alt="Tab 4 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -141,14 +141,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-red"><svg width="24" height="24" role="img" aria-label="chart-breakout-circle">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#chart-breakout-circle"></use>
-              </svg> <strong>Cross-Channel Your Creativity.</strong></p>
-            <h3>Never be on fewer channels than your customers.</h3>
-            <p>Whether you start with email or another channel, you’ll want to keep expanding to keep up with customers. See how cross-channel marketing on a single platform can drive revenue and steer your team toward the future.</p>
-            <a class="round-cta" href="#" title="Cross-Channel Messaging">Cross-Channel Messaging</a>
+              </svg> <strong><?php echo acf_text('tab5_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab5_heading'); ?></h3>
+            <p><?php echo acf_text('tab5_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab5_cta_url'); ?>" title="Cross-Channel Messaging"><?php echo acf_text('tab5_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab5_img = acf_img_src('tab5_image', $fallback_img); if ($tab5_img) { echo '<img src="'.$tab5_img.'" alt="Tab 5 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -159,14 +159,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-orange"><svg width="24" height="24" role="img" aria-label="zap">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
-              </svg> <strong>As Real Time As It Gets.</strong></p>
-            <h3>Understand the real price of not operating in real time.</h3>
-            <p>It’s a simple fact: Batch-and-blast campaigns leave money on the table. Discover the ROI-generating power of just-in-time, just-for-you messaging. Delivered with sub-second speed.</p>
-            <a class="round-cta" href="#" title="How Braze Works">How Braze Works</a>
+              </svg> <strong><?php echo acf_text('tab6_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab6_heading'); ?></h3>
+            <p><?php echo acf_text('tab6_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab6_cta_url'); ?>" title="How Braze Works"><?php echo acf_text('tab6_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab6_img = acf_img_src('tab6_image', $fallback_img); if ($tab6_img) { echo '<img src="'.$tab6_img.'" alt="Tab 6 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -177,14 +177,17 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-gray"><svg width="24" height="24" role="img" aria-label="arrow-narrow-up-right">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#arrow-narrow-up-right"></use>
-              </svg> <strong>Growth. Simply and Securely Delivered.</strong></p>
-            <h3>Secure in the now, steeled for what comes next.</h3>
-            <p>Whether it’s advancements in global privacy and security regulations, or your own influx of data, we take pride in keeping you safe as you create, test and grow. Learn more about how we keep our customers ahead of the compliance and scalability curves.</p>
-            <a class="round-cta" href="#" title="Scale without Fail">Scale without Fail</a>
+              </svg> <strong><?php echo acf_text('tab7_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab7_heading'); ?></h3>
+            <p><?php echo acf_text('tab7_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab7_cta_url'); ?>" title="Scale without Fail"><?php echo acf_text('tab7_cta_copy'); ?></a>
             <div class="cert-block">
-              <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
+              <!-- <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
               <img width="95" height="96" src="/wp-content/themes/clever/assets/images/iso.webp" alt="iso" loading="lazy">
-              <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy">
+              <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy"> -->
+              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img src="'.$cert1.'" alt="Certification 1">'; } ?>
+              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img src="'.$cert2.'" alt="Certification 2">'; } ?>
+              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img src="'.$cert3.'" alt="Certification 3">'; } ?>
             </div>
           </div>
         </div>
@@ -394,89 +397,220 @@ get_header();
 <!-- Customer engagement  -->
 
 <section class="scroll-fluid">
-        <div class="container">
-            <h2 class="scroll-fluid-heading">Dive into the craft of customer engagement.</h2>
-            <p class="scroll-fluidtxt">Any skill worth learning requires knowledge, inspiration and of course the right technology. Find it all here and start building your craft.</p>
-             
-            <div class="scrollsticky-wrap">
-                <div class="scrollsticky-grid">
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-1">
-                    <div class="scrollsticky-media">
-                      <img src="/wp-content/themes/clever/assets/images/card1-img.webp" alt="Concert crowd">
-                    </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-2">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">See how Peacock’s creative end of year targeted emails brought viewers back.</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-3">
-                    <h2 class="scrollsticky-title-lg">Be<br>Absolutely<br>Engaging.™</h2>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-4">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">Think 400 unique messages is impossible? Not for Canva.</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-5">
-                    <h3 class="scrollsticky-title">3.9+ trillion messages and other Canvas actions in 2024.</h3>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-logo" id="scrollsticky-card-6">
-                    <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/braze-trans.png" alt="braze logo">
-                      </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-7">
-                    <div class="scrollsticky-media">
-                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Smiling woman">
-                    </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-8">
-                    <p class="scrollsticky-title"><strong>BrazeAI™</strong> finds winning variants that help you win at marketing.</p>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-9">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">This gamified in-app strategy increased revenue for Snoonu by 40%</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                </div>
-              </div>
-              
+  <div class="container">
+    <h2 class="scroll-fluid-heading">
+  <?php 
+    $engagement = get_field('customer_engagement');
+    if ($engagement && is_array($engagement) && isset($engagement['ce_heading'])) {
+      echo $engagement['ce_heading'];
+    } else {
+      echo 'Empty value';
+    }
+  ?>
+</h2>
+
+    <p class="scroll-fluidtxt"><?php 
+    if ($engagement && is_array($engagement) && isset($engagement['ce_subheading'])) {
+      echo $engagement['ce_subheading'];
+    } else {
+      echo 'Empty value';
+    }
+  ?></p>
+
+    <div class="scrollsticky-wrap">
+      <div class="scrollsticky-grid">
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-1">
+          <div class="scrollsticky-media">
+            <?php 
+              $card1_image = get_field('customer_engagement')['card1_image']; 
+              if ($card1_image) {
+                  echo '<img src="' . esc_url($card1_image) . '" alt="Card1 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/card1-img.webp" alt="fallback Image">';
+              }
+            ?>
+          </div>
         </div>
 
-    </section>
+
+        <div class="scrollsticky-card" id="scrollsticky-card-2">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $peacock_logo = get_field('customer_engagement')['peacock_logo']; 
+              if ($peacock_logo) {
+                  echo '<img src="' . esc_url($peacock_logo) . '" alt="Peacock Logo">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card2_copy'])) {
+                echo $engagement['card2_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card2_cta_url = get_field('customer_engagement')['card2_cta_url'];
+            echo $card2_cta_url ? $card2_cta_url : '#';
+          ?>"> <?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card2_cta_copy'])) {
+              echo $engagement['card2_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-3">
+          <h2 class="scrollsticky-title-lg"> <?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card3_copy'])) {
+              echo $engagement['card3_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></h2>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-4">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $card4_logo = get_field('customer_engagement')['card4_logo']; 
+              if ($card4_logo) {
+                  echo '<img src="' . esc_url($card4_logo) . '" alt="Card4 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card4_copy'])) {
+                echo $engagement['card4_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card4_cta_url = get_field('customer_engagement')['card4_cta_url'];
+            echo $card4_cta_url ? $card4_cta_url : '#';
+          ?>"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card4_cta_copy'])) {
+              echo $engagement['card4_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+        <div class="scrollsticky-card" id="scrollsticky-card-5">
+          <h3 class="scrollsticky-title"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card5_copy'])) {
+              echo $engagement['card5_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></h3>
+        </div>
+
+
+        <div class="scrollsticky-logo" id="scrollsticky-card-6">
+          <div class="scrollsticky-eyebrow">
+            <?php 
+              $card6_braze_image = get_field('customer_engagement')['card6_braze_image']; 
+              if ($card6_braze_image) {
+                  echo '<img src="' . esc_url($card6_braze_image) . '" alt="braze Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/braze-trans.png" alt="fallback Image">';
+              }
+            ?>
+          </div>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-7">
+          <div class="scrollsticky-media">
+            <?php 
+              $card7_image = get_field('customer_engagement')['card7_image']; 
+              if ($card7_image) {
+                  echo '<img src="' . esc_url($card7_image) . '" alt="smiling Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/bentobox2.webp" alt="fallback Image">';
+              }
+            ?>
+          </div>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-8">
+          <p class="scrollsticky-title">
+            <?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card8_copy'])) {
+                echo $engagement['card8_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?>
+          </p>
+          <a class="scrollsticky-btn" href="<?php 
+            $card8_cta_url = get_field('customer_engagement')['card8_cta_url'];
+            echo $card8_cta_url ? $card8_cta_url : '#';
+              ?>"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card8_cta_copy'])) {
+                echo $engagement['card8_cta_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></a>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-9">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $card9_logo = get_field('customer_engagement')['card9_logo']; 
+              if ($card9_logo) {
+                  echo '<img src="' . esc_url($card9_logo) . '" alt="Card1 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card9_copy'])) {
+                echo $engagement['card9_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card9_cta_url = get_field('customer_engagement')['card9_cta_url'];
+            echo $card9_cta_url ? $card9_cta_url : '#';
+          ?>"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card9_cta_copy'])) {
+              echo $engagement['card9_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <!-- Slider Section  -->
 
@@ -621,21 +755,33 @@ get_header();
 
 
 
-<!-- CTA Hero -->
+<!-- Teaser / Footer card -->
+
 <section class="cta-hero">
   <div class="wrap">
-    <h1 class="cta-title">Join the movement to<br>journey orchestration.</h1>
+    <h1 class="cta-title">
+      <?php $cta_title = get_field('fc_heading');
+      echo $cta_title ? $cta_title : 'Empty value'; ?>
+    </h1>
     <p class="cta-sub">
-      The move to highly-intelligent, always-on journey orchestration is happening.
-      And much of it is happening on our platform. Join brands of all sizes who are
-      taking the craft of customer engagement to the next level.
+      <?php $cta_excerpt = get_field('fc_excerpt');
+      echo $cta_excerpt ? $cta_excerpt : 'Empty value'; ?>
     </p>
     <div class="cta-actions">
-      <a class="btn-primary" href="#contact">Contact Sales</a>
-      <a class="btn-link" href="#how-it-works">See How Braze Works</a>
+      <a class="btn-primary" href="<?php $cta1_url = get_field('fc_cta1_url');
+                                    echo $cta1_url ? $cta1_url : '#contact'; ?>">
+        <?php $cta1_copy = get_field('fc_cta1_copy');
+        echo $cta1_copy ? $cta1_copy : 'Empty value'; ?>
+      </a>
+      <a class="btn-link" href="<?php $cta2_url = get_field('fc_cta2_url');
+                                echo $cta2_url ? $cta2_url : '#how-it-works'; ?>">
+        <?php $cta2_copy = get_field('fc_cta2_copy');
+        echo $cta2_copy ? $cta2_copy : 'Empty value'; ?>
+      </a>
     </div>
   </div>
 </section>
+
 
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">

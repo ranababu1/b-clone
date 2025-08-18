@@ -165,3 +165,32 @@ function sanitize_svg_upload($file) {
     return $file;
 }
 add_filter('wp_handle_upload_prefilter', 'sanitize_svg_upload');
+
+
+if (!function_exists('acf_text')) {
+  function acf_text($name, $default = 'Empty value') {
+    $v = get_field($name);
+    if (is_string($v)) { $v = trim($v); }
+    return ($v !== null && $v !== '') ? esc_html($v) : esc_html($default);
+  }
+}
+
+if (!function_exists('acf_url')) {
+  function acf_url($name, $default = '#') {
+    $v = get_field($name);
+    return $v ? esc_url($v) : esc_url($default);
+  }
+}
+
+if (!function_exists('acf_img_src')) {
+  function acf_img_src($name, $fallback_src = '') {
+    $v = get_field($name);
+    if ($v) {
+      return esc_url($v);
+    }
+    return $fallback_src ? esc_url($fallback_src) : '';
+  }
+}
+
+$fallback_img = get_template_directory_uri() . '/assets/images/fallback.webp';
+

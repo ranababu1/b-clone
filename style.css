@@ -713,19 +713,19 @@ button[aria-expanded="true"]+.dropdown-menu {
 /* Sticky Navbar */
 
 .sticky-navbar {
-    position: sticky;
-    top: 82px;
-    left: 0;
-    width: 100%;
-    background-color: #FFFFFF;
-    border-radius: 50px;
-    z-index: 998;
-    padding: 10px 0;
-    text-align: center;
-    overflow-x: auto;
-    white-space: nowrap;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
-      scrollbar-width: none;
+  position: sticky;
+  top: 82px;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 50px;
+  z-index: 998;
+  padding: 10px 0;
+  text-align: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
+  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
@@ -759,7 +759,6 @@ button[aria-expanded="true"]+.dropdown-menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
-
 }
 
 .sticky-navbar ul li {
@@ -954,6 +953,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   overflow: hidden;
   border-radius: calc(var(--card-radius) - 6px);
   height: 100%;
+  background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
 }
 
 .scrollsticky-media img {
@@ -2193,4 +2193,17 @@ button[aria-expanded="true"]+.dropdown-menu {
     font-size: 18px;
   }
 
+  .sticky-navbar {
+    margin-inline: -2rem;
+    width: calc(100% + 4rem);
+  }
+
+  h2.title {
+    font-size: 2.25rem;
+    line-height: 1.22;
+  }
+
+  .stories .sub{
+    font-weight: 300;
+  }
 }
