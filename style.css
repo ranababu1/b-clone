@@ -1625,15 +1625,13 @@ button[aria-expanded="true"]+.dropdown-menu {
 
   }
 
-  .sls-logo-slider-section {
+  .sls-logo-slider-section,
+  .sls-logo-slider {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-
-  }
-
-  .sls-logo-slider {
     padding-block: 2.5rem;
   }
+
 
   .site-header__search,
   .site-header__lang,
@@ -1652,12 +1650,12 @@ button[aria-expanded="true"]+.dropdown-menu {
     padding-right: 0;
   }
 
-  .group-cta .cta{
+  .group-cta .cta {
     width: 100%;
   }
 
-.banner-content-right{
-      padding-top: 4.5rem;
+  .banner-content-right {
+    padding-top: 4.5rem;
 
-}
+  }
 }
