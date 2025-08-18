@@ -2012,6 +2012,24 @@ button[aria-expanded="true"]+.dropdown-menu {
 
   }
 
-
+  .sticky-txtimg-boxleft, 
+    .sticky-txtimg-boxright{
+      width: 100%;
+    }
+    .section{
+      height: auto;
+      padding: 20px 0; 
+    }
+    
+    .round-cta{
+      margin-bottom: 50px;
+    }
+    .cert-block{
+      text-align: center;
+    }
+    .cert-block img{
+      margin: 20px 10px;
+    }
 
 }
+
