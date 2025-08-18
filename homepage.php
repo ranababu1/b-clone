@@ -390,6 +390,84 @@ get_header();
   </div>
 </section>
 
+
+<!-- Customer engagement  -->
+
+<section class="scroll-fluid">
+        <div class="container">
+            <h2 class="scroll-fluid-heading">Dive into the craft of customer engagement.</h2>
+            <p class="scroll-fluidtxt">Any skill worth learning requires knowledge, inspiration and of course the right technology. Find it all here and start building your craft.</p>
+             
+            <div class="scrollsticky-wrap">
+                <div class="scrollsticky-grid">
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-1">
+                    <div class="scrollsticky-media">
+                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Concert crowd">
+                    </div>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-2">
+                    <div>
+                      <div class="scrollsticky-eyebrow">peacock</div>
+                      <p class="scrollsticky-title">See how Peacock’s creative end of year targeted emails brought viewers back.</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-3">
+                    <h2 class="scrollsticky-title-lg">Be<br>Absolutely<br>Engaging.™</h2>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-4">
+                    <div>
+                      <div class="scrollsticky-eyebrow">Canva</div>
+                      <p class="scrollsticky-title">Think 400 unique messages is impossible? Not for Canva.</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-5">
+                    <h3 class="scrollsticky-title">3.9+ trillion messages and other Canvas actions in 2024.</h3>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-logo" id="scrollsticky-card-6">braze</div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-7">
+                    <div class="scrollsticky-media">
+                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Smiling woman">
+                    </div>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-8">
+                    <p class="scrollsticky-title"><strong>BrazeAI™</strong> finds winning variants that help you win at marketing.</p>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-9">
+                    <div>
+                      <div class="scrollsticky-eyebrow">Snoonu</div>
+                      <p class="scrollsticky-title">This gamified in-app strategy increased revenue for Snoonu by 40%</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                </div>
+              </div>
+              
+        </div>
+
+    </section>
+
 <!-- Slider Section  -->
 
 <section class="slider-section">
