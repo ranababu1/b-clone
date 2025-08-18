@@ -6,37 +6,59 @@
 
 get_header();
 ?>
-<section class="banner-section">
-            <div class="container">
-                <div class="banner-content">
-                    <div class="banner-content-left">
-                        <h1 class="banner-title">There’s never been a better time to be a better marketer. <sup>™</sup>
-                        </h1>
-                        <p class="banner-sub-title">Data is flowing and channels are growing. Customers are demanding
-                            the world, while AI is already transforming it. Manage it all with the right
-                            <strong>customer engagement platform.</strong>
-                        </p>
-                        <div class="group-cta">
-                            <a class="cta" target="_self" href="/get-started">Contact Sales</a>
-                            <a class="cta" target="_self"
-                                href="https://try.braze.com/free_trial?INT_Conversion_Date_Most_Recent__c=2025-08-17&amp;INT_UTM_Medium_Most_Recent__c=Direct&amp;INT_UTM_Source_Most_Recent__c=direct&amp;INT_UTM_Campaign_Most_Recent__c=undefined&amp;INT_UTM_Content_Most_Recent__c=undefined&amp;INT_UTM_Term_Most_Recent__c=undefined&amp;INT_Conversion_Page_Most_Recent__c=https%3A%2F%2Fwww.braze.com%2Fja&amp;GCLID__c=undefined">Start
-                                a Free Trial</a>
-                        </div>
-                    </div>
-                    <div class="banner-content-right">
-                        <div class="banner-image-wrapper"><img fetchpriority="high" class="illustration"
-                                src="/wp-content/themes/clever/assets/images/banner-image.png" width="752" height="640" loading="lazy"
-                                alt="banner image" />
-                            <button id="openPopup" class="play-button" type="button"><svg width="28" height="28"
-                                    role="img" aria-label="play-fill">
-                                    <use href="/wp-content/themes/clever/assets/images/sprites.svg#play-fill"></use>
-                                </svg></button>
-                        </div>
-                    </div>
-                </div>
+    <section class="banner-section">
+      <div class="container">
+        <div class="banner-content">
+          <div class="banner-content-left">
+            <h1 class="banner-title">
+              <?php
+                $hero_heading = get_field('hero_section')['hero_heading'] ?? 'Value absent';
+                echo esc_html($hero_heading);
+              ?>
+              <sup>™</sup>
+            </h1>
+            <p class="banner-sub-title">
+              <?php
+                $hero_subheading = get_field('hero_section')['hero_subheading'] ?? 'Value absent';
+                $hero_subheadingbold = get_field('hero_section')['hero_subheadingbold'] ?? 'Value absent';
+                echo esc_html($hero_subheading) . ' <strong>' . esc_html($hero_subheadingbold) . '</strong>';
+              ?>
+            </p>
+            <div class="group-cta">
+              <?php
+                $cta1copy = get_field('hero_section')['cta1copy'] ?? 'Value absent';
+                $cta1url = get_field('hero_section')['cta_1_url'] ?? '#';
+              ?>
+              <a class="cta" target="_self" href="<?php echo esc_url($cta1url); ?>"><?php echo esc_html($cta1copy); ?></a>
+              <?php
+                $cta2copy = get_field('hero_section')['cta_2_copy'] ?? 'Value absent';
+                $cta2url = get_field('hero_section')['cta_2_url'] ?? '#';
+              ?>
+              <a class="cta" target="_self" href="<?php echo esc_url($cta2url); ?>"><?php echo esc_html($cta2copy); ?></a>
             </div>
-        </section>
-        
+          </div>
+          <div class="banner-content-right">
+            <div class="banner-image-wrapper">
+          <?php
+            $hero_image = $hero_section['hero_banner_image'] ?? null;
+            if ($hero_image && is_array($hero_image)) {
+              $img_url = $hero_image['url'] ?? '';
+              $img_alt = $hero_image['alt'] ?? 'hero banner image';
+              echo '<img fetchpriority="high" class="illustration" src="' . esc_url($img_url) . '" width="752" height="640" loading="lazy" alt="' . esc_attr($img_alt) . '" />';
+            } else {
+              echo '<div>Image not available</div>';
+            }
+          ?>
+          <button id="openPopup" class="play-button" type="button">
+            <svg width="28" height="28" role="img" aria-label="play-fill">
+              <use href="/wp-content/themes/clever/assets/images/sprites.svg#play-fill"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <?php echo do_shortcode('[logo_slider speed="20s" gap="50px" width="100px"]'); ?>
 

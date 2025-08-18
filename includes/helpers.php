@@ -165,3 +165,5 @@ function sanitize_svg_upload($file) {
     return $file;
 }
 add_filter('wp_handle_upload_prefilter', 'sanitize_svg_upload');
+
+
