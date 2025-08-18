@@ -1583,6 +1583,21 @@ button[aria-expanded="true"]+.dropdown-menu {
   padding-left: 2rem;
 }
 
+
+
+
+.tabs {s
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+
+
 /* ========== Media Queries ========== */
 @media (max-width: 1280px) {
   .site-nav {
@@ -1645,4 +1660,14 @@ button[aria-expanded="true"]+.dropdown-menu {
     padding-top: 4.5rem;
 
   }
+
+  .tablist {
+
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+
+
 }
