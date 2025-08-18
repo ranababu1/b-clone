@@ -75,12 +75,12 @@ get_header();
     <!-- Sticky Navigation Menu -->
     <div class="sticky-navbar" id="navbar">
       <ul>
-        <li><a href="#section1">Braze Data Platform</a></li>
-        <li><a href="#section2">BrazeAI™</a></li>
-        <li><a href="#section3">Journey Orchestration</a></li>
-        <li><a href="#section4">Cross-Channel Messaging</a></li>
-        <li><a href="#section5">Real-time Execution</a></li>
-        <li><a href="#section6">Scale Without Fail</a></li>
+        <li><a href="#section1"><?php echo acf_text('tab_title_1'); ?></a></li>
+        <li><a href="#section2"><?php echo acf_text('tab_title_2'); ?></a></li>
+        <li><a href="#section3"><?php echo acf_text('tab_title_3'); ?></a></li>
+        <li><a href="#section4"><?php echo acf_text('tab_title_4'); ?></a></li>
+        <li><a href="#section5"><?php echo acf_text('tab_title_5'); ?></a></li>
+        <li><a href="#section6"><?php echo acf_text('tab_title_6'); ?></a></li>
       </ul>
     </div>
     <!-- Content Sections -->
@@ -90,14 +90,14 @@ get_header();
           <div class="sticky-copy-block">
             <p><svg width="24" height="24" role="img" aria-label="stars-01">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
-              </svg> <strong>Data done right.</strong></p>
-            <h3>Start building stronger first-party relationships.</h3>
-            <p>Customers are giving you their data. What are you giving them in return? How about highly personalized, customized experiences? With Braze, you can.</p>
-            <a class="round-cta" href="#" title="Braze Data Platform">Braze Data Platform</a>
+              </svg> <strong><?php echo acf_text('tab2_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab2_heading'); ?></h3>
+            <p><?php echo acf_text('tab2_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab2_cta_url'); ?>" title="Braze Data Platform"><?php echo acf_text('tab2_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab2_img = acf_img_src('tab2_image', $fallback_img); if ($tab2_img) { echo '<img src="'.$tab2_img.'" alt="Tab 2 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -107,14 +107,14 @@ get_header();
           <div class="sticky-copy-block">
             <p><svg width="24" height="24" role="img" aria-label="stars-01">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
-              </svg> <strong>AI for Growth.</strong></p>
-            <h3>Employ BrazeAI™, the world’s smartest marketing advisor.</h3>
-            <p>As you learn Braze, BrazeAI™ learns your brand, helping you to create on-brand content and creative, personalize journeys, and double down on winning strategies that multiply returns.</p>
-            <a class="round-cta" href="#" title="BrazeAI">BrazeAI™</a>
+              </svg> <strong><?php echo acf_text('tab3_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab3_heading'); ?></h3>
+            <p><?php echo acf_text('tab3_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab3_cta_url'); ?>" title="BrazeAI"><?php echo acf_text('tab3_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab3_img = acf_img_src('tab3_image', $fallback_img); if ($tab3_img) { echo '<img src="'.$tab3_img.'" alt="Tab 3 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -124,14 +124,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="light-purple"><svg width="24" height="24" role="img" aria-label="zap">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
-              </svg> <strong>Build a Better Path.</strong></p>
-            <h3>Manage campaigns. Move to journey orchestration.</h3>
-            <p>No matter where you are today, highly-intelligent, always-on journey orchestration is where you’ll want to be tomorrow. See how Braze is helping brands of all sizes modernize their marketing approach.</p>
-            <a class="round-cta" href="#" title="Journey Orchestration">Journey Orchestration</a>
+              </svg> <strong><?php echo acf_text('tab4_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab4_heading'); ?></h3>
+            <p><?php echo acf_text('tab4_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab4_cta_url'); ?>" title="Journey Orchestration"><?php echo acf_text('tab4_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab4_img = acf_img_src('tab4_image', $fallback_img); if ($tab4_img) { echo '<img src="'.$tab4_img.'" alt="Tab 4 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -141,14 +141,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-red"><svg width="24" height="24" role="img" aria-label="chart-breakout-circle">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#chart-breakout-circle"></use>
-              </svg> <strong>Cross-Channel Your Creativity.</strong></p>
-            <h3>Never be on fewer channels than your customers.</h3>
-            <p>Whether you start with email or another channel, you’ll want to keep expanding to keep up with customers. See how cross-channel marketing on a single platform can drive revenue and steer your team toward the future.</p>
-            <a class="round-cta" href="#" title="Cross-Channel Messaging">Cross-Channel Messaging</a>
+              </svg> <strong><?php echo acf_text('tab5_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab5_heading'); ?></h3>
+            <p><?php echo acf_text('tab5_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab5_cta_url'); ?>" title="Cross-Channel Messaging"><?php echo acf_text('tab5_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab5_img = acf_img_src('tab5_image', $fallback_img); if ($tab5_img) { echo '<img src="'.$tab5_img.'" alt="Tab 5 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -159,14 +159,14 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-orange"><svg width="24" height="24" role="img" aria-label="zap">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
-              </svg> <strong>As Real Time As It Gets.</strong></p>
-            <h3>Understand the real price of not operating in real time.</h3>
-            <p>It’s a simple fact: Batch-and-blast campaigns leave money on the table. Discover the ROI-generating power of just-in-time, just-for-you messaging. Delivered with sub-second speed.</p>
-            <a class="round-cta" href="#" title="How Braze Works">How Braze Works</a>
+              </svg> <strong><?php echo acf_text('tab6_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab6_heading'); ?></h3>
+            <p><?php echo acf_text('tab6_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab6_cta_url'); ?>" title="How Braze Works"><?php echo acf_text('tab6_cta_copy'); ?></a>
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+          <?php $tab6_img = acf_img_src('tab6_image', $fallback_img); if ($tab6_img) { echo '<img src="'.$tab6_img.'" alt="Tab 6 Image">'; } ?>
         </div>
       </div>
     </div>
@@ -177,14 +177,17 @@ get_header();
           <div class="sticky-copy-block">
             <p class="txt-gray"><svg width="24" height="24" role="img" aria-label="arrow-narrow-up-right">
                 <use href="/wp-content/themes/clever/assets/images/sprites.svg#arrow-narrow-up-right"></use>
-              </svg> <strong>Growth. Simply and Securely Delivered.</strong></p>
-            <h3>Secure in the now, steeled for what comes next.</h3>
-            <p>Whether it’s advancements in global privacy and security regulations, or your own influx of data, we take pride in keeping you safe as you create, test and grow. Learn more about how we keep our customers ahead of the compliance and scalability curves.</p>
-            <a class="round-cta" href="#" title="Scale without Fail">Scale without Fail</a>
+              </svg> <strong><?php echo acf_text('tab7_subheading'); ?></strong></p>
+            <h3><?php echo acf_text('tab7_heading'); ?></h3>
+            <p><?php echo acf_text('tab7_excerpt'); ?></p>
+            <a class="round-cta" href="<?php echo acf_url('tab7_cta_url'); ?>" title="Scale without Fail"><?php echo acf_text('tab7_cta_copy'); ?></a>
             <div class="cert-block">
-              <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
+              <!-- <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
               <img width="95" height="96" src="/wp-content/themes/clever/assets/images/iso.webp" alt="iso" loading="lazy">
-              <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy">
+              <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy"> -->
+              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img src="'.$cert1.'" alt="Certification 1">'; } ?>
+              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img src="'.$cert2.'" alt="Certification 2">'; } ?>
+              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img src="'.$cert3.'" alt="Certification 3">'; } ?>
             </div>
           </div>
         </div>
@@ -440,7 +443,7 @@ get_header();
               if ($peacock_logo) {
                   echo '<img src="' . esc_url($peacock_logo) . '" alt="Peacock Logo">';
               } else {
-                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
               }
             ?>
             </div>
@@ -484,7 +487,7 @@ get_header();
               if ($card4_logo) {
                   echo '<img src="' . esc_url($card4_logo) . '" alt="Card4 Image">';
               } else {
-                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
               }
             ?>
             </div>
@@ -578,7 +581,7 @@ get_header();
               if ($card9_logo) {
                   echo '<img src="' . esc_url($card9_logo) . '" alt="Card1 Image">';
               } else {
-                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.svg" alt="fallback Image">';
               }
             ?>
             </div>
