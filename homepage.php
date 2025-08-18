@@ -394,89 +394,220 @@ get_header();
 <!-- Customer engagement  -->
 
 <section class="scroll-fluid">
-        <div class="container">
-            <h2 class="scroll-fluid-heading">Dive into the craft of customer engagement.</h2>
-            <p class="scroll-fluidtxt">Any skill worth learning requires knowledge, inspiration and of course the right technology. Find it all here and start building your craft.</p>
-             
-            <div class="scrollsticky-wrap">
-                <div class="scrollsticky-grid">
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-1">
-                    <div class="scrollsticky-media">
-                      <img src="/wp-content/themes/clever/assets/images/card1-img.webp" alt="Concert crowd">
-                    </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-2">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">See how Peacock’s creative end of year targeted emails brought viewers back.</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-3">
-                    <h2 class="scrollsticky-title-lg">Be<br>Absolutely<br>Engaging.™</h2>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-4">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">Think 400 unique messages is impossible? Not for Canva.</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-5">
-                    <h3 class="scrollsticky-title">3.9+ trillion messages and other Canvas actions in 2024.</h3>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-logo" id="scrollsticky-card-6">
-                    <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/braze-trans.png" alt="braze logo">
-                      </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-7">
-                    <div class="scrollsticky-media">
-                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Smiling woman">
-                    </div>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-8">
-                    <p class="scrollsticky-title"><strong>BrazeAI™</strong> finds winning variants that help you win at marketing.</p>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                  
-                  <div class="scrollsticky-card" id="scrollsticky-card-9">
-                    <div>
-                      <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
-                      </div>
-                      <p class="scrollsticky-title">This gamified in-app strategy increased revenue for Snoonu by 40%</p>
-                    </div>
-                    <a class="scrollsticky-btn" href="#">Read More</a>
-                  </div>
-            
-                </div>
-              </div>
-              
+  <div class="container">
+    <h2 class="scroll-fluid-heading">
+  <?php 
+    $engagement = get_field('customer_engagement');
+    if ($engagement && is_array($engagement) && isset($engagement['ce_heading'])) {
+      echo $engagement['ce_heading'];
+    } else {
+      echo 'Empty value';
+    }
+  ?>
+</h2>
+
+    <p class="scroll-fluidtxt"><?php 
+    if ($engagement && is_array($engagement) && isset($engagement['ce_subheading'])) {
+      echo $engagement['ce_subheading'];
+    } else {
+      echo 'Empty value';
+    }
+  ?></p>
+
+    <div class="scrollsticky-wrap">
+      <div class="scrollsticky-grid">
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-1">
+          <div class="scrollsticky-media">
+            <?php 
+              $card1_image = get_field('customer_engagement')['card1_image']; 
+              if ($card1_image) {
+                  echo '<img src="' . esc_url($card1_image) . '" alt="Card1 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/card1-img.webp" alt="fallback Image">';
+              }
+            ?>
+          </div>
         </div>
 
-    </section>
+
+        <div class="scrollsticky-card" id="scrollsticky-card-2">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $peacock_logo = get_field('customer_engagement')['peacock_logo']; 
+              if ($peacock_logo) {
+                  echo '<img src="' . esc_url($peacock_logo) . '" alt="Peacock Logo">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card2_copy'])) {
+                echo $engagement['card2_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card2_cta_url = get_field('customer_engagement')['card2_cta_url'];
+            echo $card2_cta_url ? $card2_cta_url : '#';
+          ?>"> <?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card2_cta_copy'])) {
+              echo $engagement['card2_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-3">
+          <h2 class="scrollsticky-title-lg"> <?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card3_copy'])) {
+              echo $engagement['card3_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></h2>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-4">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $card4_logo = get_field('customer_engagement')['card4_logo']; 
+              if ($card4_logo) {
+                  echo '<img src="' . esc_url($card4_logo) . '" alt="Card4 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card4_copy'])) {
+                echo $engagement['card4_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card4_cta_url = get_field('customer_engagement')['card4_cta_url'];
+            echo $card4_cta_url ? $card4_cta_url : '#';
+          ?>"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card4_cta_copy'])) {
+              echo $engagement['card4_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+        <div class="scrollsticky-card" id="scrollsticky-card-5">
+          <h3 class="scrollsticky-title"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card5_copy'])) {
+              echo $engagement['card5_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></h3>
+        </div>
+
+
+        <div class="scrollsticky-logo" id="scrollsticky-card-6">
+          <div class="scrollsticky-eyebrow">
+            <?php 
+              $card6_braze_image = get_field('customer_engagement')['card6_braze_image']; 
+              if ($card6_braze_image) {
+                  echo '<img src="' . esc_url($card6_braze_image) . '" alt="braze Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/braze-trans.png" alt="fallback Image">';
+              }
+            ?>
+          </div>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-7">
+          <div class="scrollsticky-media">
+            <?php 
+              $card7_image = get_field('customer_engagement')['card7_image']; 
+              if ($card7_image) {
+                  echo '<img src="' . esc_url($card7_image) . '" alt="smiling Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/bentobox2.webp" alt="fallback Image">';
+              }
+            ?>
+          </div>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-8">
+          <p class="scrollsticky-title">
+            <?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card8_copy'])) {
+                echo $engagement['card8_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?>
+          </p>
+          <a class="scrollsticky-btn" href="<?php 
+            $card8_cta_url = get_field('customer_engagement')['card8_cta_url'];
+            echo $card8_cta_url ? $card8_cta_url : '#';
+              ?>"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card8_cta_copy'])) {
+                echo $engagement['card8_cta_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></a>
+        </div>
+
+
+        <div class="scrollsticky-card" id="scrollsticky-card-9">
+          <div>
+            <div class="scrollsticky-eyebrow">
+              <?php 
+              $card9_logo = get_field('customer_engagement')['card9_logo']; 
+              if ($card9_logo) {
+                  echo '<img src="' . esc_url($card9_logo) . '" alt="Card1 Image">';
+              } else {
+                  echo '<img src="' . get_template_directory_uri() . '/assets/images/canva.webp" alt="fallback Image">';
+              }
+            ?>
+            </div>
+            <p class="scrollsticky-title"><?php 
+              if ($engagement && is_array($engagement) && isset($engagement['card9_copy'])) {
+                echo $engagement['card9_copy'];
+              } else {
+                echo 'Empty value';
+              }
+            ?></p>
+          </div>
+          <a class="scrollsticky-btn" href="<?php 
+            $card9_cta_url = get_field('customer_engagement')['card9_cta_url'];
+            echo $card9_cta_url ? $card9_cta_url : '#';
+          ?>"><?php 
+            if ($engagement && is_array($engagement) && isset($engagement['card9_cta_copy'])) {
+              echo $engagement['card9_cta_copy'];
+            } else {
+              echo 'Empty value';
+            }
+          ?></a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <!-- Slider Section  -->
 
@@ -626,35 +757,23 @@ get_header();
 <section class="cta-hero">
   <div class="wrap">
     <h1 class="cta-title">
-      <?php 
-        $cta_title = get_field('fc_heading'); 
-        echo $cta_title ? $cta_title : 'Empty value';
-      ?>
+      <?php $cta_title = get_field('fc_heading');
+      echo $cta_title ? $cta_title : 'Empty value'; ?>
     </h1>
     <p class="cta-sub">
-      <?php 
-        $cta_excerpt = get_field('fc_excerpt'); 
-        echo $cta_excerpt ? $cta_excerpt : 'Empty value';
-      ?>
+      <?php $cta_excerpt = get_field('fc_excerpt');
+      echo $cta_excerpt ? $cta_excerpt : 'Empty value'; ?>
     </p>
     <div class="cta-actions">
-      <a class="btn-primary" href="<?php 
-        $cta1_url = get_field('fc_cta1_url'); 
-        echo $cta1_url ? $cta1_url : '#contact'; 
-      ?>">
-        <?php 
-        $cta1_copy = get_field('fc_cta1_copy'); 
-        echo $cta1_copy ? $cta1_copy : 'Empty value';
-      ?>
+      <a class="btn-primary" href="<?php $cta1_url = get_field('fc_cta1_url');
+                                    echo $cta1_url ? $cta1_url : '#contact'; ?>">
+        <?php $cta1_copy = get_field('fc_cta1_copy');
+        echo $cta1_copy ? $cta1_copy : 'Empty value'; ?>
       </a>
-      <a class="btn-link" href="<?php 
-        $cta2_url = get_field('fc_cta2_url'); 
-        echo $cta2_url ? $cta2_url : '#how-it-works'; 
-      ?>">
-        <?php 
-        $cta2_copy = get_field('fc_cta2_copy'); 
-        echo $cta2_copy ? $cta2_copy : 'Empty value';
-      ?>
+      <a class="btn-link" href="<?php $cta2_url = get_field('fc_cta2_url');
+                                echo $cta2_url ? $cta2_url : '#how-it-works'; ?>">
+        <?php $cta2_copy = get_field('fc_cta2_copy');
+        echo $cta2_copy ? $cta2_copy : 'Empty value'; ?>
       </a>
     </div>
   </div>

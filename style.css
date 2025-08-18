@@ -953,6 +953,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   overflow: hidden;
   border-radius: calc(var(--card-radius) - 6px);
   height: 100%;
+  background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
 }
 
 .scrollsticky-media img {
