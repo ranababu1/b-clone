@@ -711,23 +711,29 @@ button[aria-expanded="true"]+.dropdown-menu {
 
 /* Products details */
 /* Sticky Navbar */
+
 .sticky-navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFFFFF;
-  border-radius: 50px;
-  z-index: 1000;
-  padding: 14px 0;
-  text-align: center;
-  opacity: 0;
-  animation: slideDown 1s forwards, fadeIn 1s forwards;
-  max-width: 1200px;
-  overflow-x: auto;
-  white-space: nowrap;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    z-index: 999;
+    padding: 10px 0;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
+      scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+.sticky-navbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 @keyframes slideDown {
   from {
