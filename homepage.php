@@ -411,7 +411,9 @@ get_header();
                   
                   <div class="scrollsticky-card" id="scrollsticky-card-2">
                     <div>
-                      <div class="scrollsticky-eyebrow">peacock</div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
                       <p class="scrollsticky-title">See how Peacock’s creative end of year targeted emails brought viewers back.</p>
                     </div>
                     <a class="scrollsticky-btn" href="#">Read More</a>
@@ -425,7 +427,9 @@ get_header();
                   
                   <div class="scrollsticky-card" id="scrollsticky-card-4">
                     <div>
-                      <div class="scrollsticky-eyebrow">Canva</div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
                       <p class="scrollsticky-title">Think 400 unique messages is impossible? Not for Canva.</p>
                     </div>
                     <a class="scrollsticky-btn" href="#">Read More</a>
@@ -437,7 +441,11 @@ get_header();
                   </div>
             
                   
-                  <div class="scrollsticky-logo" id="scrollsticky-card-6">braze</div>
+                  <div class="scrollsticky-logo" id="scrollsticky-card-6">
+                    <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/braze-big.webp" alt="Concert crowd">
+                      </div>
+                  </div>
             
                   
                   <div class="scrollsticky-card" id="scrollsticky-card-7">
@@ -455,7 +463,9 @@ get_header();
                   
                   <div class="scrollsticky-card" id="scrollsticky-card-9">
                     <div>
-                      <div class="scrollsticky-eyebrow">Snoonu</div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
                       <p class="scrollsticky-title">This gamified in-app strategy increased revenue for Snoonu by 40%</p>
                     </div>
                     <a class="scrollsticky-btn" href="#">Read More</a>
