@@ -11,7 +11,6 @@ Text Domain: clever
 
 @import url("https://fonts.cdnfonts.com/css/aribau-grotesk-trial");
 
-/* ========== Global Reset & Base Styles ========== */
 * {
   margin: 0;
   padding: 0;
@@ -100,7 +99,6 @@ body {
   font-size: 18px;
   line-height: 1.6;
   color: var(--text);
-  background: #fff;
   padding-top: 4rem;
 }
 
@@ -713,23 +711,29 @@ button[aria-expanded="true"]+.dropdown-menu {
 
 /* Products details */
 /* Sticky Navbar */
+
 .sticky-navbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #FFFFFF;
-  border-radius: 50px;
-  z-index: 1000;
-  padding: 10px 0;
-  text-align: center;
-  opacity: 0;
-  animation: slideDown 1s forwards, fadeIn 1s forwards;
-  max-width: 1200px;
-  overflow-x: auto;
-  white-space: nowrap;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    z-index: 999;
+    padding: 10px 0;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.10);
+      scrollbar-width: none;
+  -ms-overflow-style: none;
 }
+
+.sticky-navbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 @keyframes slideDown {
   from {
@@ -771,7 +775,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   display: inline-block;
   background-color: #eaecf0;
   border-radius: 9999px;
-  padding: 12px 30px;
+  padding: 12px 28px;
   font-weight: 700;
   transition: all 0.3s;
 }
@@ -977,7 +981,7 @@ button[aria-expanded="true"]+.dropdown-menu {
 
 .scrollsticky-logo {
   border-radius: var(--card-radius);
-  background: linear-gradient(135deg, #8b5cf6, #f472b6 55%, #f59e0b);
+  background: linear-gradient(146deg, #7a3ff2 0%, #9136f2 40%, #f254a3 80%, #f9a33c 100%);
   display: flex;
   align-items: center;
   justify-content: center;

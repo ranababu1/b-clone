@@ -404,7 +404,7 @@ get_header();
                   
                   <div class="scrollsticky-card" id="scrollsticky-card-1">
                     <div class="scrollsticky-media">
-                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Concert crowd">
+                      <img src="/wp-content/themes/clever/assets/images/card1-img.webp" alt="Concert crowd">
                     </div>
                   </div>
             
@@ -443,7 +443,7 @@ get_header();
                   
                   <div class="scrollsticky-logo" id="scrollsticky-card-6">
                     <div class="scrollsticky-eyebrow"> 
-                        <img src="/wp-content/themes/clever/assets/images/braze-big.webp" alt="Concert crowd">
+                        <img src="/wp-content/themes/clever/assets/images/braze-trans.png" alt="braze logo">
                       </div>
                   </div>
             
