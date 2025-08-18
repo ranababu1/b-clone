@@ -1620,19 +1620,6 @@ button[aria-expanded="true"]+.dropdown-menu {
     max-width: 100%;
   }
 
-  .sls-logo-h2 {
-    padding-inline: 4rem;
-
-  }
-
-  .sls-logo-slider-section,
-  .sls-logo-slider {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-block: 2.5rem;
-  }
-
-
   .site-header__search,
   .site-header__lang,
   .site-header__login {
