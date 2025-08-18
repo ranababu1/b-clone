@@ -165,4 +165,20 @@ document.addEventListener("DOMContentLoaded", () => {
       activateTab(btn.dataset.panel);
     });
   });
+
+  // slider
+  const slides = document.querySelector(".slides");
+    const navBtns = document.querySelectorAll(".nav-btn");
+
+    navBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const index = btn.dataset.index;
+        slides.style.transform = `translateX(calc(-${index * 100}% - ${index * 16}px))`;
+
+        navBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+
+
 });
