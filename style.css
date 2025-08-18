@@ -1146,6 +1146,22 @@ button[aria-expanded="true"]+.dropdown-menu {
   }
 }
 
+
+.products-section-header{
+  font-size:60px;
+  text-align:center;
+  line-height:112%;
+}
+.product-section-para{
+  font-size:20px;
+  text-align:center;
+  color:#344054;
+  max-width:800px;
+  margin:0 auto;
+  padding:20px 0 50px 0;
+}
+
+
 /* Story Card */
 .story {
   position: relative;
@@ -1930,7 +1946,7 @@ button[aria-expanded="true"]+.dropdown-menu {
 
 
 
-.tabs {s
+.tabs {
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -2030,6 +2046,14 @@ button[aria-expanded="true"]+.dropdown-menu {
     .cert-block img{
       margin: 20px 10px;
     }
-
+	.products-section-header{
+  	font-size:36px;
+ }
+ .product-section-para{
+ 	font-size:16px;
+ }
 }
+
+
+
 
