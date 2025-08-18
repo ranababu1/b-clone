@@ -7,44 +7,43 @@
 get_header();
 ?>
     <section class="banner-section">
-      <div class="container">
-        <div class="banner-content">
-          <div class="banner-content-left">
-            <h1 class="banner-title">
-              <?php
-                $hero_heading = get_field('hero_section')['hero_heading'] ?? 'Value absent';
-                echo esc_html($hero_heading);
-              ?>
-              <sup>™</sup>
-            </h1>
-            <p class="banner-sub-title">
-              <?php
-                $hero_subheading = get_field('hero_section')['hero_subheading'] ?? 'Value absent';
-                $hero_subheadingbold = get_field('hero_section')['hero_subheadingbold'] ?? 'Value absent';
-                echo esc_html($hero_subheading) . ' <strong>' . esc_html($hero_subheadingbold) . '</strong>';
-              ?>
-            </p>
-            <div class="group-cta">
-              <?php
-                $cta1copy = get_field('hero_section')['cta1copy'] ?? 'Value absent';
-                $cta1url = get_field('hero_section')['cta_1_url'] ?? '#';
-              ?>
-              <a class="cta" target="_self" href="<?php echo esc_url($cta1url); ?>"><?php echo esc_html($cta1copy); ?></a>
-              <?php
-                $cta2copy = get_field('hero_section')['cta_2_copy'] ?? 'Value absent';
-                $cta2url = get_field('hero_section')['cta_2_url'] ?? '#';
-              ?>
-              <a class="cta" target="_self" href="<?php echo esc_url($cta2url); ?>"><?php echo esc_html($cta2copy); ?></a>
-            </div>
-          </div>
-          <div class="banner-content-right">
-            <div class="banner-image-wrapper">
+  <div class="container">
+    <div class="banner-content">
+      <div class="banner-content-left">
+        <h1 class="banner-title">
           <?php
-            $hero_image = $hero_section['hero_banner_image'] ?? null;
-            if ($hero_image && is_array($hero_image)) {
-              $img_url = $hero_image['url'] ?? '';
-              $img_alt = $hero_image['alt'] ?? 'hero banner image';
-              echo '<img fetchpriority="high" class="illustration" src="' . esc_url($img_url) . '" width="752" height="640" loading="lazy" alt="' . esc_attr($img_alt) . '" />';
+            $hero_section = get_field('hero_section');
+            $hero_heading = $hero_section['hero_heading'] ?? 'Value absent';
+            echo esc_html($hero_heading);
+          ?>
+          <sup>™</sup>
+        </h1>
+        <p class="banner-sub-title">
+          <?php
+            $hero_subheading = $hero_section['hero_subheading'] ?? 'Value absent';
+            $hero_subheadingbold = $hero_section['hero_subheadingbold'] ?? 'Value absent';
+            echo esc_html($hero_subheading) . ' <strong>' . esc_html($hero_subheadingbold) . '</strong>';
+          ?>
+        </p>
+        <div class="group-cta">
+          <?php
+            $cta1copy = $hero_section['cta1copy'] ?? 'Value absent';
+            $cta1url = $hero_section['cta_1_url'] ?? '#';
+          ?>
+          <a class="cta" target="_self" href="<?php echo esc_url($cta1url); ?>"><?php echo esc_html($cta1copy); ?></a>
+          <?php
+            $cta2copy = $hero_section['cta_2_copy'] ?? 'Value absent';
+            $cta2url = $hero_section['cta_2_url'] ?? '#';
+          ?>
+          <a class="cta" target="_self" href="<?php echo esc_url($cta2url); ?>"><?php echo esc_html($cta2copy); ?></a>
+        </div>
+      </div>
+      <div class="banner-content-right">
+        <div class="banner-image-wrapper">
+          <?php
+            $hero_image_url = $hero_section['hero_banner_image'] ?? '';
+            if (!empty($hero_image_url)) {
+              echo '<img fetchpriority="high" class="illustration" src="' . esc_url($hero_image_url) . '" width="752" height="640" loading="lazy" alt="hero banner image" />';
             } else {
               echo '<div>Image not available</div>';
             }
@@ -59,6 +58,7 @@ get_header();
     </div>
   </div>
 </section>
+
 
     <?php echo do_shortcode('[logo_slider speed="20s" gap="50px" width="100px"]'); ?>
 
