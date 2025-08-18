@@ -53,7 +53,7 @@ get_header();
             echo '<div>Image not available</div>';
           }
           ?>
-          
+
         </div>
       </div>
     </div>
@@ -62,6 +62,140 @@ get_header();
 
 
 <?php echo do_shortcode('[logo_slider speed="20s" gap="50px" width="100px"]'); ?>
+
+
+<section>
+  <div class="container">
+
+    <h2 class="products-section-header">Customers don’t have campaigns, they have conversations.
+    </h2>
+    <p class="product-section-para">
+      A majority of customers want personalized experiences from companies. Absolutely none of them want to be sold to. That’s why the move from totally-siloed campaigns to fully-orchestrated journeys is so darn important. Here’s how we’re helping organizations on their journey.
+    </p>
+    <!-- Sticky Navigation Menu -->
+    <div class="sticky-navbar" id="navbar">
+      <ul>
+        <li><a href="#section1">Braze Data Platform</a></li>
+        <li><a href="#section2">BrazeAI™</a></li>
+        <li><a href="#section3">Journey Orchestration</a></li>
+        <li><a href="#section4">Cross-Channel Messaging</a></li>
+        <li><a href="#section5">Real-time Execution</a></li>
+        <li><a href="#section6">Scale Without Fail</a></li>
+      </ul>
+    </div>
+    <!-- Content Sections -->
+    <div id="section1" class="section">
+      <div class="sticky-txtimg-box">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p><svg width="24" height="24" role="img" aria-label="stars-01">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
+              </svg> <strong>Data done right.</strong></p>
+            <h3>Start building stronger first-party relationships.</h3>
+            <p>Customers are giving you their data. What are you giving them in return? How about highly personalized, customized experiences? With Braze, you can.</p>
+            <a class="round-cta" href="#" title="Braze Data Platform">Braze Data Platform</a>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div id="section2" class="section">
+      <div class="sticky-txtimg-box row-reverse">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p><svg width="24" height="24" role="img" aria-label="stars-01">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#stars-01"></use>
+              </svg> <strong>AI for Growth.</strong></p>
+            <h3>Employ BrazeAI™, the world’s smartest marketing advisor.</h3>
+            <p>As you learn Braze, BrazeAI™ learns your brand, helping you to create on-brand content and creative, personalize journeys, and double down on winning strategies that multiply returns.</p>
+            <a class="round-cta" href="#" title="BrazeAI">BrazeAI™</a>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div id="section3" class="section">
+      <div class="sticky-txtimg-box">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p class="light-purple"><svg width="24" height="24" role="img" aria-label="zap">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
+              </svg> <strong>Build a Better Path.</strong></p>
+            <h3>Manage campaigns. Move to journey orchestration.</h3>
+            <p>No matter where you are today, highly-intelligent, always-on journey orchestration is where you’ll want to be tomorrow. See how Braze is helping brands of all sizes modernize their marketing approach.</p>
+            <a class="round-cta" href="#" title="Journey Orchestration">Journey Orchestration</a>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div id="section4" class="section">
+      <div class="sticky-txtimg-box row-reverse">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p class="txt-red"><svg width="24" height="24" role="img" aria-label="chart-breakout-circle">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#chart-breakout-circle"></use>
+              </svg> <strong>Cross-Channel Your Creativity.</strong></p>
+            <h3>Never be on fewer channels than your customers.</h3>
+            <p>Whether you start with email or another channel, you’ll want to keep expanding to keep up with customers. See how cross-channel marketing on a single platform can drive revenue and steer your team toward the future.</p>
+            <a class="round-cta" href="#" title="Cross-Channel Messaging">Cross-Channel Messaging</a>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div id="section5" class="section">
+      <div class="sticky-txtimg-box">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p class="txt-orange"><svg width="24" height="24" role="img" aria-label="zap">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#zap"></use>
+              </svg> <strong>As Real Time As It Gets.</strong></p>
+            <h3>Understand the real price of not operating in real time.</h3>
+            <p>It’s a simple fact: Batch-and-blast campaigns leave money on the table. Discover the ROI-generating power of just-in-time, just-for-you messaging. Delivered with sub-second speed.</p>
+            <a class="round-cta" href="#" title="How Braze Works">How Braze Works</a>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div id="section6" class="section">
+      <div class="sticky-txtimg-box row-reverse">
+        <div class="sticky-txtimg-boxleft">
+          <div class="sticky-copy-block">
+            <p class="txt-gray"><svg width="24" height="24" role="img" aria-label="arrow-narrow-up-right">
+                <use href="/wp-content/themes/clever/assets/images/sprites.svg#arrow-narrow-up-right"></use>
+              </svg> <strong>Growth. Simply and Securely Delivered.</strong></p>
+            <h3>Secure in the now, steeled for what comes next.</h3>
+            <p>Whether it’s advancements in global privacy and security regulations, or your own influx of data, we take pride in keeping you safe as you create, test and grow. Learn more about how we keep our customers ahead of the compliance and scalability curves.</p>
+            <a class="round-cta" href="#" title="Scale without Fail">Scale without Fail</a>
+            <div class="cert-block">
+              <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
+              <img width="95" height="96" src="/wp-content/themes/clever/assets/images/iso.webp" alt="iso" loading="lazy">
+              <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="sticky-txtimg-boxright">
+          <img width="592" height="556" class="img-responsive" src="/wp-content/themes/clever/assets/images/braze.webp" alt="Start building stronger first-party relationships" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <section class="stories">
   <div class="container">
@@ -87,239 +221,330 @@ get_header();
       <a class="cta" href="<?php echo esc_url($ss_cta_url); ?>"><?php echo esc_html($ss_cta_copy); ?></a>
     </div>
 
-    <div class="tabs" role="tablist" aria-label="Success stories">
-      <button class="tab is-active" role="tab" aria-selected="true" data-panel="ltv">Increase Lifetime Value</button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="simplify">Simplify Architecture</button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="silos">Break Down Silos</button>
-      <button class="tab" role="tab" aria-selected="false" data-panel="love">Grow Brand Love</button>
-    </div>
+    <div class="tablist">
+      <div class="tabs" role="tablist" aria-label="Success stories">
+        <button class="tab is-active" role="tab" aria-selected="true" data-panel="ltv">Increase Lifetime Value</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="simplify">Simplify Architecture</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="silos">Break Down Silos</button>
+        <button class="tab" role="tab" aria-selected="false" data-panel="love">Grow Brand Love</button>
+      </div>
+      <!-- Panel 1 -->
+      <div class="panel is-active" data-id="ltv" role="tabpanel">
+        <div class="grid">
+          <a class="story" href="#story1">
+            <div class="logo">
+              <?php $logo1 = get_field('ss_client_logo1'); ?>
+              <?php if ($logo1): ?>
+                <img src="<?php echo esc_url($logo1); ?>" alt="Client logo">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+            <div class="quote">
+              <?php echo esc_html(get_field('ss_client_message1') ?: 'Empty value'); ?>
+            </div>
+            <div class="person">
+              <span class="name"><?php echo esc_html(get_field('ss_client_name1') ?: 'Empty value'); ?></span>
+              <span class="role"><?php echo esc_html(get_field('ss_client_designation1') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="photo">
+              <?php $img1 = get_field('ss_image1'); ?>
+              <?php if ($img1): ?>
+                <img src="<?php echo esc_url($img1['url']); ?>" alt="">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+          </a>
+          <div class="metrics">
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box1_top_copy') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box1_bottom_copy') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box2_top_copy') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box2_bottom_copy') ?: 'Empty value'); ?></span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Panel 1 -->
-    <div class="panel is-active" data-id="ltv" role="tabpanel">
-      <div class="grid">
-        <a class="story" href="#story1">
-          <div class="logo">
-            <?php $logo1 = get_field('ss_client_logo1'); ?>
-            <?php if ($logo1): ?>
-              <img src="<?php echo esc_url($logo1); ?>" alt="Client logo">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
+      <!-- Panel 2 -->
+      <div class="panel" data-id="simplify" role="tabpanel" hidden>
+        <div class="grid">
+          <a class="story" href="#story2">
+            <div class="logo">
+              <?php $logo2 = get_field('ss_client_logo2'); ?>
+              <?php if ($logo2): ?>
+                <img src="<?php echo esc_url($logo2); ?>" alt="Client logo">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+            <div class="quote">
+              <?php echo esc_html(get_field('ss_client_message2') ?: 'Empty value'); ?>
+            </div>
+            <div class="person">
+              <span class="name"><?php echo esc_html(get_field('ss_client_name2') ?: 'Empty value'); ?></span>
+              <span class="role"><?php echo esc_html(get_field('ss_client_designation2') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="photo">
+              <?php $img2 = get_field('ss_image2'); ?>
+              <?php if ($img2): ?>
+                <img src="<?php echo esc_url($img2); ?>" alt="">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+          </a>
+          <div class="metrics">
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box_top_copy2') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box_bottom_copy2') ?: 'Empty value'); ?></span>
+            </div>
           </div>
-          <div class="quote">
-            <?php echo esc_html(get_field('ss_client_message1') ?: 'Empty value'); ?>
+        </div>
+      </div>
+
+      <!-- Panel 3 -->
+      <div class="panel" data-id="silos" role="tabpanel" hidden>
+        <div class="grid">
+          <a class="story" href="#story3">
+            <div class="logo">
+              <?php $logo3 = get_field('ss_client_logo3'); ?>
+              <?php if ($logo3): ?>
+                <img src="<?php echo esc_url($logo3); ?>" alt="Client logo">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+            <div class="quote">
+              <?php echo esc_html(get_field('ss_client_message3') ?: 'Empty value'); ?>
+            </div>
+            <div class="person">
+              <span class="name"><?php echo esc_html(get_field('ss_client_name3') ?: 'Empty value'); ?></span>
+              <span class="role"><?php echo esc_html(get_field('ss_client_designation3') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="photo">
+              <?php $img3 = get_field('ss_image3'); ?>
+              <?php if ($img3): ?>
+                <img src="<?php echo esc_url($img3['url']); ?>" alt="">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+          </a>
+          <div class="metrics">
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box1_top_copy3') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box1_bottom_copy3') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box2_top_copy3') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box2_bottom_copy3') ?: 'Empty value'); ?></span>
+            </div>
           </div>
-          <div class="person">
-            <span class="name"><?php echo esc_html(get_field('ss_client_name1') ?: 'Empty value'); ?></span>
-            <span class="role"><?php echo esc_html(get_field('ss_client_designation1') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="photo">
-            <?php $img1 = get_field('ss_image1'); ?>
-            <?php if ($img1): ?>
-              <img src="<?php echo esc_url($img1['url']); ?>" alt="">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-        </a>
-        <div class="metrics">
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box1_top_copy') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box1_bottom_copy') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box2_top_copy') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box2_bottom_copy') ?: 'Empty value'); ?></span>
+        </div>
+      </div>
+
+      <!-- Panel 4 -->
+      <div class="panel" data-id="love" role="tabpanel" hidden>
+        <div class="grid">
+          <a class="story" href="#story4">
+            <div class="logo">
+              <?php $logo4 = get_field('ss_client_logo4'); ?>
+              <?php if ($logo4): ?>
+                <img src="<?php echo esc_url($logo4); ?>" alt="Client logo">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+            <div class="quote">
+              <?php echo esc_html(get_field('ss_client_message4') ?: 'Empty value'); ?>
+            </div>
+            <div class="person">
+              <span class="name"><?php echo esc_html(get_field('ss_client_name4') ?: 'Empty value'); ?></span>
+              <span class="role"><?php echo esc_html(get_field('ss_client_designation4') ?: 'Empty value'); ?></span>
+            </div>
+            <div class="photo">
+              <?php $img4 = get_field('ss_image4'); ?>
+              <?php if ($img4): ?>
+                <img src="<?php echo esc_url($img4); ?>" alt="">
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+          </a>
+          <div class="metrics">
+            <div class="metric">
+              <span class="value"><?php echo esc_html(get_field('ss_right_box_top_copy4') ?: 'Empty value'); ?></span>
+              <span class="label"><?php echo esc_html(get_field('ss_right_box_bottom_copy4') ?: 'Empty value'); ?></span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Panel 2 -->
-    <div class="panel" data-id="simplify" role="tabpanel" hidden>
-      <div class="grid">
-        <a class="story" href="#story2">
-          <div class="logo">
-            <?php $logo2 = get_field('ss_client_logo2'); ?>
-            <?php if ($logo2): ?>
-              <img src="<?php echo esc_url($logo2); ?>" alt="Client logo">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-          <div class="quote">
-            <?php echo esc_html(get_field('ss_client_message2') ?: 'Empty value'); ?>
-          </div>
-          <div class="person">
-            <span class="name"><?php echo esc_html(get_field('ss_client_name2') ?: 'Empty value'); ?></span>
-            <span class="role"><?php echo esc_html(get_field('ss_client_designation2') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="photo">
-            <?php $img2 = get_field('ss_image2'); ?>
-            <?php if ($img2): ?>
-              <img src="<?php echo esc_url($img2); ?>" alt="">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-        </a>
-        <div class="metrics">
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box_top_copy2') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box_bottom_copy2') ?: 'Empty value'); ?></span>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Panel 3 -->
-    <div class="panel" data-id="silos" role="tabpanel" hidden>
-      <div class="grid">
-        <a class="story" href="#story3">
-          <div class="logo">
-            <?php $logo3 = get_field('ss_client_logo3'); ?>
-            <?php if ($logo3): ?>
-              <img src="<?php echo esc_url($logo3); ?>" alt="Client logo">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-          <div class="quote">
-            <?php echo esc_html(get_field('ss_client_message3') ?: 'Empty value'); ?>
-          </div>
-          <div class="person">
-            <span class="name"><?php echo esc_html(get_field('ss_client_name3') ?: 'Empty value'); ?></span>
-            <span class="role"><?php echo esc_html(get_field('ss_client_designation3') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="photo">
-            <?php $img3 = get_field('ss_image3'); ?>
-            <?php if ($img3): ?>
-              <img src="<?php echo esc_url($img3['url']); ?>" alt="">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-        </a>
-        <div class="metrics">
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box1_top_copy3') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box1_bottom_copy3') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box2_top_copy3') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box2_bottom_copy3') ?: 'Empty value'); ?></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Panel 4 -->
-    <div class="panel" data-id="love" role="tabpanel" hidden>
-      <div class="grid">
-        <a class="story" href="#story4">
-          <div class="logo">
-            <?php $logo4 = get_field('ss_client_logo4'); ?>
-            <?php if ($logo4): ?>
-              <img src="<?php echo esc_url($logo4); ?>" alt="Client logo">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-          <div class="quote">
-            <?php echo esc_html(get_field('ss_client_message4') ?: 'Empty value'); ?>
-          </div>
-          <div class="person">
-            <span class="name"><?php echo esc_html(get_field('ss_client_name4') ?: 'Empty value'); ?></span>
-            <span class="role"><?php echo esc_html(get_field('ss_client_designation4') ?: 'Empty value'); ?></span>
-          </div>
-          <div class="photo">
-            <?php $img4 = get_field('ss_image4'); ?>
-            <?php if ($img4): ?>
-              <img src="<?php echo esc_url($img4); ?>" alt="">
-            <?php else: ?>
-              <div>Empty value</div>
-            <?php endif; ?>
-          </div>
-        </a>
-        <div class="metrics">
-          <div class="metric">
-            <span class="value"><?php echo esc_html(get_field('ss_right_box_top_copy4') ?: 'Empty value'); ?></span>
-            <span class="label"><?php echo esc_html(get_field('ss_right_box_bottom_copy4') ?: 'Empty value'); ?></span>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
 
+
+<!-- Customer engagement  -->
+
+<section class="scroll-fluid">
+        <div class="container">
+            <h2 class="scroll-fluid-heading">Dive into the craft of customer engagement.</h2>
+            <p class="scroll-fluidtxt">Any skill worth learning requires knowledge, inspiration and of course the right technology. Find it all here and start building your craft.</p>
+             
+            <div class="scrollsticky-wrap">
+                <div class="scrollsticky-grid">
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-1">
+                    <div class="scrollsticky-media">
+                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Concert crowd">
+                    </div>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-2">
+                    <div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
+                      <p class="scrollsticky-title">See how Peacock’s creative end of year targeted emails brought viewers back.</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-3">
+                    <h2 class="scrollsticky-title-lg">Be<br>Absolutely<br>Engaging.™</h2>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-4">
+                    <div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
+                      <p class="scrollsticky-title">Think 400 unique messages is impossible? Not for Canva.</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-5">
+                    <h3 class="scrollsticky-title">3.9+ trillion messages and other Canvas actions in 2024.</h3>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-logo" id="scrollsticky-card-6">
+                    <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/braze-big.webp" alt="Concert crowd">
+                      </div>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-7">
+                    <div class="scrollsticky-media">
+                      <img src="/wp-content/themes/clever/assets/images/bentobox2.webp" alt="Smiling woman">
+                    </div>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-8">
+                    <p class="scrollsticky-title"><strong>BrazeAI™</strong> finds winning variants that help you win at marketing.</p>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                  
+                  <div class="scrollsticky-card" id="scrollsticky-card-9">
+                    <div>
+                      <div class="scrollsticky-eyebrow"> 
+                        <img src="/wp-content/themes/clever/assets/images/canva.svg" alt="Concert crowd">
+                      </div>
+                      <p class="scrollsticky-title">This gamified in-app strategy increased revenue for Snoonu by 40%</p>
+                    </div>
+                    <a class="scrollsticky-btn" href="#">Read More</a>
+                  </div>
+            
+                </div>
+              </div>
+              
+        </div>
+
+    </section>
+
 <!-- Slider Section  -->
 
 <section class="slider-section">
-            <div class="container">
-                <div class="slider-container">
-                    <div class="slider-heading">
-                        See our industry<br> and customer recognitions.
-                    </div>
-                    <div class="slider-content">
-                        <div class="slides">
-                            <div class="slide">
-                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-1.png" />
-                                <div class="slide-content">
-                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" />
-                                    <p>Braze has been named a Leader in the October 2024 Gartner® Magic Quadrant for Multichannel Marketing Hubs for the second year in a row!</p>
-                                    <div class="cta-button">Download Report</div>
-                                </div>
-                                <a class="slider-overlay" href="" aria-label="Download Report"></a>
-                            </div>
-                            <div class="slide">
-                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-2.png" />
-                                <div class="slide-content">
-                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" />
-                                    <p>Braze named a <strong>Leader in The Forrester Wave™</strong>: Cross-Channel Marketing Hubs, Q1 2023</p>
-                                    <div class="cta-button">Download Report</div>
-                                </div>
-                                <a class="slider-overlay" href="" aria-label="Download Report"></a>
-                            </div>
-                            <div class="slide">
-                                <img class="slider-thumbnail" alt="IDC" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-3.png" />
-                                <div class="slide-content">
-                                    <img alt="IDC" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" />
-                                    <p>Braze named a <strong>Leader in the 2023 IDC MarketScape</strong> Worldwide Omni-Channel Marketing Platforms for B2C Enterprises</p>
-                                    <div class="cta-button">Learn More</div>
-                                </div>
-                                <a class="slider-overlay" href="" aria-label="Learn More"></a>
-                            </div>
-                            <div class="slide">
-                                <img class="slider-thumbnail" alt="Report" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-4.png" />
-                                <div class="slide-content">
-                                    <img alt="Report" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" />
-                                    <p><strong>Ranked #1 in G2's Push Notification Grid</strong>, ahead of 41 competitors, we maintain our top spot as the category grows.</p>
-                                    <div class="cta-button">View Report</div>
-                                </div>
-                                <a class="slider-overlay" href="" aria-label="View Report"></a>
-                            </div>
-                            <div class="slide">
-                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-5.png" />
-                                <div class="slide-content">
-                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" />
-                                    <p>Braze earned the <strong>Best of Feature Set</strong>, <strong>Best Relationship</strong>, and <strong>Best Value for Price</strong> awards in the <strong>Trust Radius 2023 Best of Awards</strong></p>
-                                    <div class="cta-button">Learn More</div>
-                                </div>
-                                <a class="slider-overlay" href="" aria-label="Learn More"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider-nav">
-                    <button class="nav-btn active" data-index="0"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" /></button>
-                    <button class="nav-btn" data-index="1"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" /></button>
-                    <button class="nav-btn" data-index="2"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" /></button>
-                    <button class="nav-btn real-color" data-index="3"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" /></button>
-                    <button class="nav-btn" data-index="4"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" /></button>
-                </div>
+  <div class="container">
+    <div class="slider-container">
+      <div class="slider-heading">
+        See our industry<br> and customer recognitions.
+      </div>
+      <div class="slider-content">
+        <div class="slides">
+          <div class="slide">
+            <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-1.png" />
+            <div class="slide-content">
+              <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" />
+              <p>Braze has been named a Leader in the October 2024 Gartner® Magic Quadrant for Multichannel Marketing Hubs for the second year in a row!</p>
+              <div class="cta-button">Download Report</div>
             </div>
-        </section>
+            <a class="slider-overlay" href="" aria-label="Download Report"></a>
+          </div>
+          <div class="slide">
+            <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-2.png" />
+            <div class="slide-content">
+              <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" />
+              <p>Braze named a <strong>Leader in The Forrester Wave™</strong>: Cross-Channel Marketing Hubs, Q1 2023</p>
+              <div class="cta-button">Download Report</div>
+            </div>
+            <a class="slider-overlay" href="" aria-label="Download Report"></a>
+          </div>
+          <div class="slide">
+            <img class="slider-thumbnail" alt="IDC" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-3.png" />
+            <div class="slide-content">
+              <img alt="IDC" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" />
+              <p>Braze named a <strong>Leader in the 2023 IDC MarketScape</strong> Worldwide Omni-Channel Marketing Platforms for B2C Enterprises</p>
+              <div class="cta-button">Learn More</div>
+            </div>
+            <a class="slider-overlay" href="" aria-label="Learn More"></a>
+          </div>
+          <div class="slide">
+            <img class="slider-thumbnail" alt="Report" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-4.png" />
+            <div class="slide-content">
+              <img alt="Report" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" />
+              <p><strong>Ranked #1 in G2's Push Notification Grid</strong>, ahead of 41 competitors, we maintain our top spot as the category grows.</p>
+              <div class="cta-button">View Report</div>
+            </div>
+            <a class="slider-overlay" href="" aria-label="View Report"></a>
+          </div>
+          <div class="slide">
+            <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-5.png" />
+            <div class="slide-content">
+              <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" />
+              <p>Braze earned the <strong>Best of Feature Set</strong>, <strong>Best Relationship</strong>, and <strong>Best Value for Price</strong> awards in the <strong>Trust Radius 2023 Best of Awards</strong></p>
+              <div class="cta-button">Learn More</div>
+            </div>
+            <a class="slider-overlay" href="" aria-label="Learn More"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="nav-btn active" data-index="0"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" /></button>
+      <button class="nav-btn" data-index="1"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" /></button>
+      <button class="nav-btn" data-index="2"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" /></button>
+      <button class="nav-btn real-color" data-index="3"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" /></button>
+      <button class="nav-btn" data-index="4"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" /></button>
+    </div>
+  </div>
+</section>
 
 <!-- Resources -->
 <section class="resources">
