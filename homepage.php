@@ -252,98 +252,80 @@ get_header();
   </div>
 </section>
 
-
-
 <!-- Resources -->
 <section class="resources">
   <div class="container">
     <div class="resources-head">
-      <h2 class="resources-title">Check out the resources.</h2>
-      <a class="resources-blog-btn" href="#blog">View the Blog</a>
+      <h2 class="resources-title">
+        <?php echo esc_html(get_field('resources_heading') ?: 'Check out the resources.'); ?>
+      </h2>
+      <?php
+      $blog_btn_url  = get_field('resources_blog_url') ?: '#';
+      $blog_btn_copy = get_field('resources_blog_copy') ?: 'View the Blog';
+      ?>
+      <a class="resources-blog-btn" href="<?php echo esc_url($blog_btn_url); ?>">
+        <?php echo esc_html($blog_btn_copy); ?>
+      </a>
     </div>
 
     <div class="grid">
-      <!-- Card 1 -->
-      <a class="card" href="#r1" aria-label="2025 Global Customer Engagement Review">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image.webp" alt="2025 Global Customer Engagement Review" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Report</span>
-          </div>
-          <h3 class="card-title">2025 Global Customer Engagement Review</h3>
-        </div>
-      </a>
+      <?php
+      $resources = new WP_Query([
+        'post_type'      => 'resource',
+        'posts_per_page' => 6,
+        'tax_query'      => [
+          [
+            'taxonomy' => 'resource_type',
+            'field'    => 'slug',
+            'terms'    => 'article',
+          ],
+        ],
+      ]);
 
-      <!-- Card 2 -->
-      <a class="card" href="#r2" aria-label="Braze Inspiration Guide">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image2.webp" alt="Braze Inspiration Guide" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Guide</span>
-          </div>
-          <h3 class="card-title">Braze Inspiration Guide</h3>
-        </div>
-      </a>
+      if ($resources->have_posts()):
+        while ($resources->have_posts()): $resources->the_post();
+          $thumb_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+          $rt = get_field('reading_time');
+          if ($rt === '' || $rt === null) {
+            $reading_time_display = 'Empty value';
+          } else {
+            $reading_time_display = is_numeric($rt) ? (string) (int) $rt : (string) $rt;
+          }
+          $featured_raw = get_field('featured');
+          $is_featured =
+            (is_array($featured_raw) && in_array('Yes', $featured_raw, true)) ||
+            (is_string($featured_raw) && strtolower($featured_raw) === 'yes');
 
-      <!-- Card 3 -->
-      <a class="card" href="#r3" aria-label="Melting Points, Where Creativity Meets Technology">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image3.webp" alt="Melting Points, Where Creativity Meets Technology" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Guide</span>
-          </div>
-          <h3 class="card-title">Melting Points, Where Creativity Meets Technology</h3>
-        </div>
-      </a>
-
-      <!-- Card 4 -->
-      <a class="card" href="#r4" aria-label="Building Long Term Loyalty, What Consumers Want">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image4.webp" alt="Building Long Term Loyalty, What Consumers Want" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Report</span>
-          </div>
-          <h3 class="card-title">Building Long Term Loyalty, What Consumers Want</h3>
-        </div>
-      </a>
-
-      <!-- Card 5 with reading time -->
-      <a class="card" href="#r5" aria-label="How iOS 18 is shaping engagement">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image5.webp" alt="How iOS 18 is shaping engagement" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Blog</span>
-            <span class="reading-time">5 min read</span>
-          </div>
-          <h3 class="card-title">How iOS 18 is shaping engagement, and what marketers can do about it</h3>
-        </div>
-      </a>
-
-      <!-- Card 6 -->
-      <a class="card" href="#r6" aria-label="Optimizing SMS and email for holiday campaigns">
-        <div class="media">
-          <img src="/wp-content/themes/clever/assets/images/blog-image6.webp" alt="Optimizing SMS and email for holiday campaigns" />
-        </div>
-        <div class="content">
-          <div class="meta">
-            <span class="badge">Guide</span>
-          </div>
-          <h3 class="card-title">Optimizing SMS and email for holiday campaigns</h3>
-        </div>
-      </a>
+          $badge = $is_featured ? 'Featured' : 'Article';
+      ?>
+          <a class="card" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title() ?: 'Empty value'); ?>">
+            <div class="media">
+              <?php if ($thumb_url): ?>
+                <img src="<?php echo esc_url($thumb_url); ?>" alt="<?php echo esc_attr(get_the_title() ?: 'Empty value'); ?>" />
+              <?php else: ?>
+                <div>Empty value</div>
+              <?php endif; ?>
+            </div>
+            <div class="content">
+              <div class="meta">
+                <span class="badge"><?php echo esc_html($badge); ?></span>
+                <span class="reading-time"><?php echo esc_html($reading_time_display); ?> min read</span>
+              </div>
+              <h3 class="card-title"><?php echo esc_html(get_the_title() ?: 'Empty value'); ?></h3>
+            </div>
+          </a>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      else:
+        echo '<p>No resources found.</p>';
+      endif;
+      ?>
     </div>
   </div>
 </section>
+
+
 
 <!-- CTA Hero -->
 <section class="cta-hero">
