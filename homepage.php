@@ -252,6 +252,74 @@ get_header();
   </div>
 </section>
 
+<!-- Slider Section  -->
+
+<section class="slider-section">
+            <div class="container">
+                <div class="slider-container">
+                    <div class="slider-heading">
+                        See our industry<br> and customer recognitions.
+                    </div>
+                    <div class="slider-content">
+                        <div class="slides">
+                            <div class="slide">
+                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-1.png" />
+                                <div class="slide-content">
+                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" />
+                                    <p>Braze has been named a Leader in the October 2024 Gartner® Magic Quadrant for Multichannel Marketing Hubs for the second year in a row!</p>
+                                    <div class="cta-button">Download Report</div>
+                                </div>
+                                <a class="slider-overlay" href="" aria-label="Download Report"></a>
+                            </div>
+                            <div class="slide">
+                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-2.png" />
+                                <div class="slide-content">
+                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" />
+                                    <p>Braze named a <strong>Leader in The Forrester Wave™</strong>: Cross-Channel Marketing Hubs, Q1 2023</p>
+                                    <div class="cta-button">Download Report</div>
+                                </div>
+                                <a class="slider-overlay" href="" aria-label="Download Report"></a>
+                            </div>
+                            <div class="slide">
+                                <img class="slider-thumbnail" alt="IDC" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-3.png" />
+                                <div class="slide-content">
+                                    <img alt="IDC" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" />
+                                    <p>Braze named a <strong>Leader in the 2023 IDC MarketScape</strong> Worldwide Omni-Channel Marketing Platforms for B2C Enterprises</p>
+                                    <div class="cta-button">Learn More</div>
+                                </div>
+                                <a class="slider-overlay" href="" aria-label="Learn More"></a>
+                            </div>
+                            <div class="slide">
+                                <img class="slider-thumbnail" alt="Report" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-4.png" />
+                                <div class="slide-content">
+                                    <img alt="Report" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" />
+                                    <p><strong>Ranked #1 in G2's Push Notification Grid</strong>, ahead of 41 competitors, we maintain our top spot as the category grows.</p>
+                                    <div class="cta-button">View Report</div>
+                                </div>
+                                <a class="slider-overlay" href="" aria-label="View Report"></a>
+                            </div>
+                            <div class="slide">
+                                <img class="slider-thumbnail" alt="Braze" loading="lazy" width="200" height="200" src="/wp-content/themes/clever/assets/images/slider-thumbnail-5.png" />
+                                <div class="slide-content">
+                                    <img alt="Braze" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" />
+                                    <p>Braze earned the <strong>Best of Feature Set</strong>, <strong>Best Relationship</strong>, and <strong>Best Value for Price</strong> awards in the <strong>Trust Radius 2023 Best of Awards</strong></p>
+                                    <div class="cta-button">Learn More</div>
+                                </div>
+                                <a class="slider-overlay" href="" aria-label="Learn More"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="nav-btn active" data-index="0"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-1.png" /></button>
+                    <button class="nav-btn" data-index="1"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-2.svg" /></button>
+                    <button class="nav-btn" data-index="2"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-3.png" /></button>
+                    <button class="nav-btn real-color" data-index="3"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-4.png" /></button>
+                    <button class="nav-btn" data-index="4"><img alt="company logo" loading="lazy" width="100" height="18" src="/wp-content/themes/clever/assets/images/slider-logo-5.png" /></button>
+                </div>
+            </div>
+        </section>
+
 <!-- Resources -->
 <section class="resources">
   <div class="container">
