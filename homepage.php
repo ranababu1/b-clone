@@ -36,24 +36,7 @@ get_header();
                 </div>
             </div>
         </section>
-        <div class="popup-overlay" id="popupOverlay">
-            <div class="popup">
-                <span class="popup-close" id="popupClose"><svg width="24" height="24" role="img" aria-label="x-close">
-                        <use href="/wp-content/themes/clever/assets/images/sprites.svg#x-close"></use>
-                    </svg></span>
-                    <script src="https://fast.wistia.com/embed/medias/fjcfsbutc4.jsonp" async></script>
-                    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-                    
-                    <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                      <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                        <div class="wistia_embed wistia_async_fjcfsbutc4 videoFoam=true" 
-                             id="wistia-fjcfsbutc4-1"
-                             style="height:100%;position:relative;width:100%">
-                        </div>
-                      </div>
-                    </div>
-            </div>
-        </div>
+        
 
     <?php echo do_shortcode('[logo_slider speed="20s" gap="50px" width="100px"]'); ?>
 
@@ -151,7 +134,7 @@ get_header();
           <!-- Card 1 -->
           <a class="card" href="#r1" aria-label="2025 Global Customer Engagement Review">
             <div class="media">
-              <img src="images/blog-image.webp" alt="2025 Global Customer Engagement Review" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image.webp" alt="2025 Global Customer Engagement Review" />
             </div>
             <div class="content">
               <div class="meta">
@@ -164,7 +147,7 @@ get_header();
           <!-- Card 2 -->
           <a class="card" href="#r2" aria-label="Braze Inspiration Guide">
             <div class="media">
-              <img src="images/blog-image2.webp" alt="Braze Inspiration Guide" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image2.webp" alt="Braze Inspiration Guide" />
             </div>
             <div class="content">
               <div class="meta">
@@ -177,7 +160,7 @@ get_header();
           <!-- Card 3 -->
           <a class="card" href="#r3" aria-label="Melting Points, Where Creativity Meets Technology">
             <div class="media">
-              <img src="images/blog-image3.webp" alt="Melting Points, Where Creativity Meets Technology" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image3.webp" alt="Melting Points, Where Creativity Meets Technology" />
             </div>
             <div class="content">
               <div class="meta">
@@ -190,7 +173,7 @@ get_header();
           <!-- Card 4 -->
           <a class="card" href="#r4" aria-label="Building Long Term Loyalty, What Consumers Want">
             <div class="media">
-              <img src="images/blog-image4.webp" alt="Building Long Term Loyalty, What Consumers Want" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image4.webp" alt="Building Long Term Loyalty, What Consumers Want" />
             </div>
             <div class="content">
               <div class="meta">
@@ -203,7 +186,7 @@ get_header();
           <!-- Card 5 with reading time -->
           <a class="card" href="#r5" aria-label="How iOS 18 is shaping engagement">
             <div class="media">
-              <img src="images/blog-image5.webp" alt="How iOS 18 is shaping engagement" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image5.webp" alt="How iOS 18 is shaping engagement" />
             </div>
             <div class="content">
               <div class="meta">
@@ -217,7 +200,7 @@ get_header();
           <!-- Card 6 -->
           <a class="card" href="#r6" aria-label="Optimizing SMS and email for holiday campaigns">
             <div class="media">
-              <img src="images/blog-image6.webp" alt="Optimizing SMS and email for holiday campaigns" />
+              <img src="/wp-content/themes/clever/assets/images/blog-image6.webp" alt="Optimizing SMS and email for holiday campaigns" />
             </div>
             <div class="content">
               <div class="meta">
@@ -245,6 +228,25 @@ get_header();
         </div>
       </div>
     </section>
+
+    <div class="popup-overlay" id="popupOverlay">
+            <div class="popup">
+                <span class="popup-close" id="popupClose"><svg width="24" height="24" role="img" aria-label="x-close">
+                        <use href="/wp-content/themes/clever/assets/images/sprites.svg#x-close"></use>
+                    </svg></span>
+                    <script src="https://fast.wistia.com/embed/medias/fjcfsbutc4.jsonp" async></script>
+                    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                    
+                    <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                      <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                        <div class="wistia_embed wistia_async_fjcfsbutc4 videoFoam=true" 
+                             id="wistia-fjcfsbutc4-1"
+                             style="height:100%;position:relative;width:100%">
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
 
 <?php get_footer();
 ?>
