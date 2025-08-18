@@ -621,21 +621,45 @@ get_header();
 
 
 
-<!-- CTA Hero -->
+<!-- Teaser / Footer card -->
+
 <section class="cta-hero">
   <div class="wrap">
-    <h1 class="cta-title">Join the movement to<br>journey orchestration.</h1>
+    <h1 class="cta-title">
+      <?php 
+        $cta_title = get_field('fc_heading'); 
+        echo $cta_title ? $cta_title : 'Empty value';
+      ?>
+    </h1>
     <p class="cta-sub">
-      The move to highly-intelligent, always-on journey orchestration is happening.
-      And much of it is happening on our platform. Join brands of all sizes who are
-      taking the craft of customer engagement to the next level.
+      <?php 
+        $cta_excerpt = get_field('fc_excerpt'); 
+        echo $cta_excerpt ? $cta_excerpt : 'Empty value';
+      ?>
     </p>
     <div class="cta-actions">
-      <a class="btn-primary" href="#contact">Contact Sales</a>
-      <a class="btn-link" href="#how-it-works">See How Braze Works</a>
+      <a class="btn-primary" href="<?php 
+        $cta1_url = get_field('fc_cta1_url'); 
+        echo $cta1_url ? $cta1_url : '#contact'; 
+      ?>">
+        <?php 
+        $cta1_copy = get_field('fc_cta1_copy'); 
+        echo $cta1_copy ? $cta1_copy : 'Empty value';
+      ?>
+      </a>
+      <a class="btn-link" href="<?php 
+        $cta2_url = get_field('fc_cta2_url'); 
+        echo $cta2_url ? $cta2_url : '#how-it-works'; 
+      ?>">
+        <?php 
+        $cta2_copy = get_field('fc_cta2_copy'); 
+        echo $cta2_copy ? $cta2_copy : 'Empty value';
+      ?>
+      </a>
     </div>
   </div>
 </section>
+
 
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
