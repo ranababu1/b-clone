@@ -1635,4 +1635,24 @@ button[aria-expanded="true"]+.dropdown-menu {
     padding-block: 2.5rem;
   }
 
+  .site-header__search,
+  .site-header__lang,
+  .site-header__login {
+    display: none
+  }
+
+  .banner-title {
+    font-size: 2.25rem;
+    letter-spacing: -.02em;
+    line-height: 1.22;
+  }
+
+  .banner-content-left {
+    padding-block: 2rem;
+    padding-right: 0;
+  }
+
+  .group-cta .cta{
+    width: 100%;
+  }
 }
