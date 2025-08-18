@@ -260,8 +260,8 @@ get_header();
         <?php echo esc_html(get_field('resources_heading') ?: 'Check out the resources.'); ?>
       </h2>
       <?php
-        $blog_btn_url  = get_field('resources_blog_url') ?: '#';
-        $blog_btn_copy = get_field('resources_blog_copy') ?: 'View the Blog';
+      $blog_btn_url  = get_field('resources_blog_url') ?: '#';
+      $blog_btn_copy = get_field('resources_blog_copy') ?: 'View the Blog';
       ?>
       <a class="resources-blog-btn" href="<?php echo esc_url($blog_btn_url); ?>">
         <?php echo esc_html($blog_btn_copy); ?>
@@ -291,13 +291,13 @@ get_header();
           } else {
             $reading_time_display = is_numeric($rt) ? (string) (int) $rt : (string) $rt;
           }
-          $featured_raw = get_field('featured'); 
+          $featured_raw = get_field('featured');
           $is_featured =
             (is_array($featured_raw) && in_array('Yes', $featured_raw, true)) ||
             (is_string($featured_raw) && strtolower($featured_raw) === 'yes');
 
           $badge = $is_featured ? 'Featured' : 'Article';
-          ?>
+      ?>
           <a class="card" href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr(get_the_title() ?: 'Empty value'); ?>">
             <div class="media">
               <?php if ($thumb_url): ?>
@@ -314,7 +314,7 @@ get_header();
               <h3 class="card-title"><?php echo esc_html(get_the_title() ?: 'Empty value'); ?></h3>
             </div>
           </a>
-          <?php
+      <?php
         endwhile;
         wp_reset_postdata();
       else:
