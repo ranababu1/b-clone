@@ -1655,4 +1655,9 @@ button[aria-expanded="true"]+.dropdown-menu {
   .group-cta .cta{
     width: 100%;
   }
+
+.banner-content-right{
+      padding-top: 4.5rem;
+
+}
 }
