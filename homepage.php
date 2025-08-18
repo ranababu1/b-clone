@@ -87,14 +87,14 @@ get_header();
       <a class="cta" href="<?php echo esc_url($ss_cta_url); ?>"><?php echo esc_html($ss_cta_copy); ?></a>
     </div>
 
-    <div class="tabs" role="tablist" aria-label="Success stories">
+    <div class="tablist">
+      <div class="tabs" role="tablist" aria-label="Success stories">
       <button class="tab is-active" role="tab" aria-selected="true" data-panel="ltv">Increase Lifetime Value</button>
       <button class="tab" role="tab" aria-selected="false" data-panel="simplify">Simplify Architecture</button>
       <button class="tab" role="tab" aria-selected="false" data-panel="silos">Break Down Silos</button>
       <button class="tab" role="tab" aria-selected="false" data-panel="love">Grow Brand Love</button>
     </div>
-
-    <!-- Panel 1 -->
+       <!-- Panel 1 -->
     <div class="panel is-active" data-id="ltv" role="tabpanel">
       <div class="grid">
         <a class="story" href="#story1">
@@ -249,6 +249,9 @@ get_header();
         </div>
       </div>
     </div>
+    </div>
+
+ 
 
   </div>
 </section>
