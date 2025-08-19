@@ -492,6 +492,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   line-height: 1.5;
   padding: 11px 19px;
   border-radius: 46px;
+  white-space: nowrap;
 }
 
 .site-header__get-started:hover {
@@ -954,6 +955,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   border-radius: calc(var(--card-radius) - 6px);
   height: 100%;
   background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
+  width: 100%;
 }
 
 .scrollsticky-media img {
@@ -966,7 +968,7 @@ button[aria-expanded="true"]+.dropdown-menu {
 .scrollsticky-btn {
   display: inline-block;
   padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: 50px;
   background: #0b0b0f;
   color: #fff;
   text-decoration: none;
@@ -1156,6 +1158,14 @@ button[aria-expanded="true"]+.dropdown-menu {
   align-items: flex-start;
 }
 
+.story .photo img{
+   transition: transform 0.3s ease;
+}
+.story:hover .photo img{
+  transform: scale(105%);
+}
+
+
 @media (min-width: 768px) {
   .stories .head {
     flex-direction: row;
@@ -1187,7 +1197,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   padding: 12px 18px;
   background: #0C111D;
   color: #fff;
-  border-radius: 999px;
+  border-radius: 50px;
   text-decoration: none;
   font-weight: 800;
   box-shadow: 0 12px 28px rgba(0, 0, 0, .25);
@@ -1209,7 +1219,7 @@ button[aria-expanded="true"]+.dropdown-menu {
 .tab {
   white-space: nowrap;
   padding: 5px 16px;
-  border-radius: 999px;
+  border-radius: 50px;
   font-weight: 800;
   backdrop-filter: blur(5px);
   background: var(--chip-ghost);
@@ -1464,7 +1474,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   padding: 14px 18px;
   background: #0C111D;
   color: #fff;
-  border-radius: 999px;
+  border-radius: 50px;
   font-weight: 800;
   box-shadow: var(--shadow-btn);
   position: relative;
@@ -1562,7 +1572,7 @@ button[aria-expanded="true"]+.dropdown-menu {
 .resources .badge {
   display: inline-block;
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: 50px;
   background: var(--chip);
   border: 1px solid var(--chip-border);
   color: #111827;
@@ -1643,7 +1653,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   align-items: center;
   justify-content: center;
   padding: 14px 22px;
-  border-radius: 999px;
+  border-radius: 50px;
   color: #0C111D;
   background: #fff;
   font-weight: 800;
@@ -1996,7 +2006,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   height: 40px;
   padding: 0 12px;
   border: 1px solid #D1D5DB;
-  border-radius: 999px;
+  border-radius: 50px;
   background: #fff;
   color: #111827;
   font-weight: 800;
@@ -2203,7 +2213,42 @@ button[aria-expanded="true"]+.dropdown-menu {
     line-height: 1.22;
   }
 
-  .stories .sub{
+  .stories .sub {
     font-weight: 300;
   }
+
+  .sticky-navbar {
+    margin-inline: -2rem;
+    width: calc(100% + 4rem);
+    border-radius: 0;
+  }
+
+  .stories .title {
+    font-size: 2.25rem;
+    line-height: 1.22;
+  }
+
+  .products-section-header {
+    font-size: 34px;
+    padding: 50px 0 0 0;
+    text-align: left;
+  }
+
+  .product-section-para {
+    text-align: left;
+  }
+
+  .sticky-copy-block {
+    padding-top: 50px;
+  }
+
+  .tabs {
+    padding-top: 50px;
+  }
+
+  .slider-heading{
+    font-size: 2.25rem;
+
+  }
+
 }
