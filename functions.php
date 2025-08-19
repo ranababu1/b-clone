@@ -36,8 +36,13 @@ if (!function_exists('clever_theme_setup')) {
 add_action('after_setup_theme', 'clever_theme_setup');
 function clever_theme_assets()
 {
-    $style_path = get_template_directory() . '/style.css';
-    $script_path = get_template_directory() . '/assets/js/main.js';
+    $template_dir = get_template_directory();
+    $style_path = $template_dir . '/style.css';
+    $script_path = $template_dir . '/assets/js/main.js';
+    
+    // Validate paths are within template directory
+    if (strpos(realpath($style_path), realpath($template_dir)) !== 0) return;
+    if (strpos(realpath($script_path), realpath($template_dir)) !== 0) return;
 
     wp_enqueue_style(
         'clever-main-style',
@@ -61,5 +66,24 @@ function clever_theme_assets()
 
 add_action('wp_enqueue_scripts', 'clever_theme_assets');
 
+// Dequeue reCAPTCHA on homepage
+function dequeue_recaptcha_homepage() {
+    if (is_front_page() || is_home()) {
+        wp_dequeue_script('google-recaptcha');
+        wp_dequeue_script('wpcf7-recaptcha');
+    }
+}
+add_action('wp_enqueue_scripts', 'dequeue_recaptcha_homepage', 100);
+
 // Custom helper functions
 require get_template_directory() . '/includes/helpers.php';
+
+// Add lazy loading to images
+function add_lazy_loading($attr, $attachment, $size) {
+    if (!is_admin() && !wp_is_mobile()) {
+        $attr['loading'] = 'lazy';
+        $attr['decoding'] = 'async';
+    }
+    return $attr;
+}
+add_filter('wp_get_attachment_image_attributes', 'add_lazy_loading', 10, 3);

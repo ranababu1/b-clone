@@ -48,7 +48,7 @@ get_header();
           <?php
           $hero_image_url = $hero_section['hero_banner_image'] ?? '';
           if (!empty($hero_image_url)) {
-            echo '<img fetchpriority="high" class="illustration" src="' . esc_url($hero_image_url) . '" width="752" height="640" loading="lazy" alt="hero banner image" />';
+            echo '<img fetchpriority="high" class="illustration" src="' . esc_url($hero_image_url) . '" width="752" height="640" alt="hero banner image" />';
           } else {
             echo '<div>Image not available</div>';
           }
@@ -97,7 +97,7 @@ get_header();
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <?php $tab2_img = acf_img_src('tab2_image', $fallback_img); if ($tab2_img) { echo '<img src="'.$tab2_img.'" alt="Tab 2 Image">'; } ?>
+          <?php $tab2_img = acf_img_src('tab2_image', $fallback_img); if ($tab2_img) { echo '<img src="'.$tab2_img.'" alt="Tab 2 Image" loading="lazy">'; } ?>
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@ get_header();
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <?php $tab3_img = acf_img_src('tab3_image', $fallback_img); if ($tab3_img) { echo '<img src="'.$tab3_img.'" alt="Tab 3 Image">'; } ?>
+          <?php $tab3_img = acf_img_src('tab3_image', $fallback_img); if ($tab3_img) { echo '<img src="'.$tab3_img.'" alt="Tab 3 Image" loading="lazy">'; } ?>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@ get_header();
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <?php $tab4_img = acf_img_src('tab4_image', $fallback_img); if ($tab4_img) { echo '<img src="'.$tab4_img.'" alt="Tab 4 Image">'; } ?>
+          <?php $tab4_img = acf_img_src('tab4_image', $fallback_img); if ($tab4_img) { echo '<img src="'.$tab4_img.'" alt="Tab 4 Image" loading="lazy">'; } ?>
         </div>
       </div>
     </div>
@@ -148,7 +148,7 @@ get_header();
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <?php $tab5_img = acf_img_src('tab5_image', $fallback_img); if ($tab5_img) { echo '<img src="'.$tab5_img.'" alt="Tab 5 Image">'; } ?>
+          <?php $tab5_img = acf_img_src('tab5_image', $fallback_img); if ($tab5_img) { echo '<img src="'.$tab5_img.'" alt="Tab 5 Image" loading="lazy">'; } ?>
         </div>
       </div>
     </div>
@@ -166,7 +166,7 @@ get_header();
           </div>
         </div>
         <div class="sticky-txtimg-boxright">
-          <?php $tab6_img = acf_img_src('tab6_image', $fallback_img); if ($tab6_img) { echo '<img src="'.$tab6_img.'" alt="Tab 6 Image">'; } ?>
+          <?php $tab6_img = acf_img_src('tab6_image', $fallback_img); if ($tab6_img) { echo '<img src="'.$tab6_img.'" alt="Tab 6 Image" loading="lazy">'; } ?>
         </div>
       </div>
     </div>
@@ -185,9 +185,9 @@ get_header();
               <!-- <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
               <img width="95" height="96" src="/wp-content/themes/clever/assets/images/iso.webp" alt="iso" loading="lazy">
               <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy"> -->
-              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img width="150" height="96" src="'.$cert1.'" alt="Certification 1">'; } ?>
-              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img width="95" height="96" src="'.$cert2.'" alt="Certification 2">'; } ?>
-              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img width="104" height="96" src="'.$cert3.'" alt="Certification 3">'; } ?>
+              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img width="150" height="96" src="'.$cert1.'" alt="Certification 1" loading="lazy">'; } ?>
+              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img width="95" height="96" src="'.$cert2.'" alt="Certification 2" loading="lazy">'; } ?>
+              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img width="104" height="96" src="'.$cert3.'" alt="Certification 3" loading="lazy">'; } ?>
             </div>
           </div>
         </div>
@@ -424,7 +424,8 @@ get_header();
         <div class="scrollsticky-card" id="scrollsticky-card-1">
           <div class="scrollsticky-media">
             <?php 
-              $card1_image = get_field('customer_engagement')['card1_image']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $card1_image = $engagement['card1_image'] ?? '';
               if ($card1_image) {
                   echo '<img src="' . esc_url($card1_image) . '" alt="Card1 Image">';
               } else {
@@ -439,7 +440,8 @@ get_header();
           <div>
             <div class="scrollsticky-eyebrow">
               <?php 
-              $peacock_logo = get_field('customer_engagement')['peacock_logo']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $peacock_logo = $engagement['peacock_logo'] ?? '';
               if ($peacock_logo) {
                   echo '<img src="' . esc_url($peacock_logo) . '" alt="Peacock Logo">';
               } else {
@@ -456,8 +458,9 @@ get_header();
             ?></p>
           </div>
           <a class="scrollsticky-btn" href="<?php 
-            $card2_cta_url = get_field('customer_engagement')['card2_cta_url'];
-            echo $card2_cta_url ? $card2_cta_url : '#';
+            $engagement = get_field('customer_engagement') ?? [];
+            $card2_cta_url = $engagement['card2_cta_url'] ?? '#';
+            echo esc_url($card2_cta_url);
           ?>"> <?php 
             if ($engagement && is_array($engagement) && isset($engagement['card2_cta_copy'])) {
               echo $engagement['card2_cta_copy'];
@@ -483,7 +486,8 @@ get_header();
           <div>
             <div class="scrollsticky-eyebrow">
               <?php 
-              $card4_logo = get_field('customer_engagement')['card4_logo']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $card4_logo = $engagement['card4_logo'] ?? '';
               if ($card4_logo) {
                   echo '<img src="' . esc_url($card4_logo) . '" alt="Card4 Image">';
               } else {
@@ -500,8 +504,9 @@ get_header();
             ?></p>
           </div>
           <a class="scrollsticky-btn" href="<?php 
-            $card4_cta_url = get_field('customer_engagement')['card4_cta_url'];
-            echo $card4_cta_url ? $card4_cta_url : '#';
+            $engagement = get_field('customer_engagement') ?? [];
+            $card4_cta_url = $engagement['card4_cta_url'] ?? '#';
+            echo esc_url($card4_cta_url);
           ?>"><?php 
             if ($engagement && is_array($engagement) && isset($engagement['card4_cta_copy'])) {
               echo $engagement['card4_cta_copy'];
@@ -525,7 +530,8 @@ get_header();
         <div class="scrollsticky-logo" id="scrollsticky-card-6">
           <div class="scrollsticky-eyebrow">
             <?php 
-              $card6_braze_image = get_field('customer_engagement')['card6_braze_image']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $card6_braze_image = $engagement['card6_braze_image'] ?? '';
               if ($card6_braze_image) {
                   echo '<img src="' . esc_url($card6_braze_image) . '" alt="braze Image">';
               } else {
@@ -539,7 +545,8 @@ get_header();
         <div class="scrollsticky-card" id="scrollsticky-card-7">
           <div class="scrollsticky-media scrollsticky-media--custom">
             <?php 
-              $card7_image = get_field('customer_engagement')['card7_image']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $card7_image = $engagement['card7_image'] ?? '';
               if ($card7_image) {
                   echo '<img src="' . esc_url($card7_image) . '" alt="smiling Image">';
               } else {
@@ -561,8 +568,9 @@ get_header();
             ?>
           </p>
           <a class="scrollsticky-btn" href="<?php 
-            $card8_cta_url = get_field('customer_engagement')['card8_cta_url'];
-            echo $card8_cta_url ? $card8_cta_url : '#';
+            $engagement = get_field('customer_engagement') ?? [];
+            $card8_cta_url = $engagement['card8_cta_url'] ?? '#';
+            echo esc_url($card8_cta_url);
               ?>"><?php 
               if ($engagement && is_array($engagement) && isset($engagement['card8_cta_copy'])) {
                 echo $engagement['card8_cta_copy'];
@@ -577,7 +585,8 @@ get_header();
           <div>
             <div class="scrollsticky-eyebrow">
               <?php 
-              $card9_logo = get_field('customer_engagement')['card9_logo']; 
+              $engagement = get_field('customer_engagement') ?? [];
+              $card9_logo = $engagement['card9_logo'] ?? '';
               if ($card9_logo) {
                   echo '<img src="' . esc_url($card9_logo) . '" alt="Card1 Image">';
               } else {
@@ -594,8 +603,9 @@ get_header();
             ?></p>
           </div>
           <a class="scrollsticky-btn" href="<?php 
-            $card9_cta_url = get_field('customer_engagement')['card9_cta_url'];
-            echo $card9_cta_url ? $card9_cta_url : '#';
+            $engagement = get_field('customer_engagement') ?? [];
+            $card9_cta_url = $engagement['card9_cta_url'] ?? '#';
+            echo esc_url($card9_cta_url);
           ?>"><?php 
             if ($engagement && is_array($engagement) && isset($engagement['card9_cta_copy'])) {
               echo $engagement['card9_cta_copy'];
@@ -766,9 +776,6 @@ get_header();
     <span class="popup-close" id="popupClose"><svg width="24" height="24" role="img" aria-label="x-close">
         <use href="/wp-content/themes/clever/assets/images/sprites.svg#x-close"></use>
       </svg></span>
-    <script src="https://fast.wistia.com/embed/medias/fjcfsbutc4.jsonp" async></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-
     <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
       <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
         <div class="wistia_embed wistia_async_fjcfsbutc4 videoFoam=true"

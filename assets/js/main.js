@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   dropdownItems.forEach((item) => {
     const button = item.querySelector('button[aria-haspopup="true"]');
-    const menuId = button?.getAttribute("aria-controls");
-    const menu = document.getElementById(menuId);
+    if (!button) return;
+    const menuId = button.getAttribute("aria-controls");
+    const menu = menuId ? document.getElementById(menuId) : null;
 
     item.addEventListener("mouseenter", () => {
       if (langSelector) langSelector.classList.remove("active");
@@ -60,26 +61,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         option.classList.add("site-header__lang-option--selected");
         const selectedLang = option.getAttribute("data-lang");
-        console.log("Language selected:", selectedLang);
+        // Language selection handled client-side only
       });
     });
   }
 
   // ========== Video Popup ==========
-  window._wq = window._wq || [];
+  const WISTIA_VIDEO_ID = 'fjcfsbutc4';
   let wistiaPlayer = null;
-  let pendingOpen = false;
-
-  _wq.push({
-    id: "fjcfsbutc4",
-    onReady: function (video) {
-      wistiaPlayer = video;
-      if (pendingOpen) {
-        pendingOpen = false;
-        openPopup(true);
-      }
-    },
-  });
+  let wistiaLoaded = false;
+  
+  function loadWistiaScripts() {
+    if (wistiaLoaded) return Promise.resolve();
+    
+    return new Promise((resolve) => {
+      const script1 = document.createElement('script');
+      script1.src = `https://fast.wistia.com/embed/medias/${WISTIA_VIDEO_ID}.jsonp`;
+      script1.async = true;
+      
+      const script2 = document.createElement('script');
+      script2.src = 'https://fast.wistia.com/assets/external/E-v1.js';
+      script2.async = true;
+      
+      script2.onload = () => {
+        wistiaLoaded = true;
+        window._wq = window._wq || [];
+        _wq.push({
+          id: WISTIA_VIDEO_ID,
+          onReady: function (video) {
+            wistiaPlayer = video;
+            resolve();
+          },
+        });
+      };
+      
+      document.head.appendChild(script1);
+      document.head.appendChild(script2);
+    });
+  }
 
   const openBtn = document.getElementById("openPopup");
   const overlay = document.getElementById("popupOverlay");
@@ -98,18 +117,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function openPopup(fromReady = false) {
-    overlay.classList.add("active");
-    if (wistiaPlayer) {
-      startVideo();
-    } else if (!fromReady) {
-      pendingOpen = true;
+  async function openPopup() {
+    if (overlay) {
+      overlay.classList.add("active");
+      if (!wistiaLoaded) {
+        await loadWistiaScripts();
+      }
+      if (wistiaPlayer) {
+        startVideo();
+      }
     }
   }
 
   function closePopup() {
-    overlay.classList.remove("active");
-    if (wistiaPlayer) stopVideo();
+    if (overlay) {
+      overlay.classList.remove("active");
+      if (wistiaPlayer) stopVideo();
+    }
   }
 
   if (openBtn) {
@@ -127,7 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePopup();
+    if (e.key === "Escape" && overlay && overlay.classList.contains("active")) {
+      closePopup();
+    }
   });
 
   // ========== Mobile Menu Toggle ==========
@@ -168,23 +194,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // slider
   const slides = document.querySelector(".slides");
-    const navBtns = document.querySelectorAll(".nav-btn");
+  const navBtns = document.querySelectorAll(".nav-btn");
 
+  if (slides && navBtns.length > 0) {
     navBtns.forEach(btn => {
       btn.addEventListener("click", () => {
         const index = btn.dataset.index;
-        slides.style.transform = `translateX(calc(-${index * 100}% - ${index * 16}px))`;
-
-        navBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+        if (index !== undefined) {
+          slides.style.transform = `translateX(calc(-${index * 100}% - ${index * 16}px))`;
+          navBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        }
       });
     });
+  }
 
 });
 
 document.addEventListener( 'wpcf7mailsent', function( event ) {
   setTimeout(function() {
-    location = 'https://clevertask.site/'; 
+    window.location.href = 'https://clevertask.site/';
   }, 3000);
 }, false );
 
@@ -198,8 +227,7 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
       card.style.opacity = "0";
       card.style.transition = "opacity 600ms ease";
       card.style.willChange = "opacity";
-      if (card.dataset.keepTransform !== "1") {
-      }
+
     });
     const reveal = () => {
       if (prefersReduced) {

@@ -21,8 +21,8 @@
 
     <header class="site-header">
         <div class="container header-content">
-            <a href="/" aria-label="Homepage" data-event-name="Header" data-event-label="Logo">
-                <img src="/wp-content/themes/clever/assets/images/logo.png" alt="Braze logo" width="80" height="38" class="brand-logo" />
+            <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="Homepage" data-event-name="Header" data-event-label="Logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Braze logo" width="80" height="38" class="brand-logo" />
             </a>
 
             <nav class="site-nav" aria-label="Main navigation">
