@@ -492,6 +492,7 @@ button[aria-expanded="true"]+.dropdown-menu {
   line-height: 1.5;
   padding: 11px 19px;
   border-radius: 46px;
+  white-space: nowrap;
 }
 
 .site-header__get-started:hover {
@@ -2206,4 +2207,11 @@ button[aria-expanded="true"]+.dropdown-menu {
   .stories .sub{
     font-weight: 300;
   }
+
+   .sticky-navbar {
+        margin-inline: -2rem;
+        width: calc(100% + 4rem);
+        border-radius: 0;
+    }
+
 }
