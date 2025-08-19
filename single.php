@@ -2,10 +2,10 @@
 
 <article class="single-post">
     <div class="container">
-        <?php while (have_posts()) : the_post(); ?>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <header class="entry-header">
                 <h1 class="entry-title"><?php the_title(); ?></h1>
-                <?php clever_post_meta(); ?>
+                <?php if (function_exists('clever_post_meta')) clever_post_meta(); ?>
             </header>
             
             <div class="entry-content">
@@ -31,7 +31,9 @@
             endif;
             ?>
             
-        <?php endwhile; ?>
+        <?php endwhile; else : ?>
+            <p><?php esc_html_e('Sorry, no post found.', 'clever'); ?></p>
+        <?php endif; ?>
     </div>
 </article>
 

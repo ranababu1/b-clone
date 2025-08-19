@@ -7,13 +7,13 @@
         <h2 class="brand-title">Braze.<br>Be Absolutely<br>Engaging.™</h2>
         <div class="social">
           <a href="#" aria-label="Instagram" class="social-link">
-            <img src="/wp-content/themes/clever/assets/images/instagram.svg" alt="Instagram" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.svg" alt="Instagram" />
           </a>
           <a href="#" aria-label="X" class="social-link">
-            <img src="/wp-content/themes/clever/assets/images/twitter.svg" alt="X" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.svg" alt="X" />
           </a>
           <a href="#" aria-label="LinkedIn" class="social-link">
-            <img src="/wp-content/themes/clever/assets/images/linkedin.svg" alt="LinkedIn" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="LinkedIn" />
           </a>
         </div>
       </div>
@@ -44,8 +44,8 @@
           </ul>
           <hr class="divider">
           <div class="badges">
-            <img src="/wp-content/themes/clever/assets/images/soc.webp" alt="AICPA SOC" width="56" height="56" />
-            <img src="/wp-content/themes/clever/assets/images/iso.webp" alt="ISO 27001" width="56" height="56" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/soc.webp" alt="AICPA SOC" width="56" height="56" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/iso.webp" alt="ISO 27001" width="56" height="56" />
           </div>
         </div>
         <div class="col">

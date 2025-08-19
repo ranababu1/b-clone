@@ -5,20 +5,23 @@
 
 if (!function_exists('clever_post_meta')) {
     function clever_post_meta() {
-        echo '<div class="post-meta">';
-        echo '<span class="post-date">' . get_the_date() . '</span>';
-        echo '</div>';
+        $output = '<div class="post-meta">';
+        $output .= '<span class="post-date">' . get_the_date() . '</span>';
+        $output .= '</div>';
+        echo $output;
     }
 }
 
 if (!function_exists('clever_read_more_link')) {
     function clever_read_more_link() {
-        echo '<a href="' . esc_url(get_permalink()) . '" class="read-more">';
-        echo esc_html__('Read More', 'clever');
-        echo '</a>';
+        $output = '<a href="' . esc_url(get_permalink()) . '" class="read-more">';
+        $output .= esc_html__('Read More', 'clever');
+        $output .= '</a>';
+        echo $output;
     }
 }
 
+if (!function_exists('case_study_cpt')) {
 function case_study_cpt() {
     register_post_type('case_study', array(
         'labels' => array(
@@ -46,7 +49,9 @@ function case_study_cpt() {
     ));
 }
 add_action('init', 'case_study_cpt');
+}
 
+if (!function_exists('resources_cpt')) {
 function resources_cpt() {
     register_post_type('resource', array(
         'labels' => array(
@@ -97,8 +102,10 @@ function resources_cpt() {
     register_taxonomy('resource_type', 'resource', $args);
 }
 add_action('init', 'resources_cpt');
+}
 
 
+if (!function_exists('partners_cpt')) {
 function partners_cpt() {
     register_post_type('partner', array(
         'labels' => array(
@@ -126,21 +133,23 @@ function partners_cpt() {
     ));
 }
 add_action('init', 'partners_cpt');
+}
 
-add_filter('use_block_editor_for_post', '__return_false', 10);
-add_filter('use_block_editor_for_post_type', '__return_false', 10);
-add_filter('use_widgets_block_editor', '__return_false');
-remove_action('wp_enqueue_scripts', 'wp_common_block_scripts_and_styles');
-remove_action('wp_enqueue_scripts', 'wp_enqueue_editor');
-remove_action('enqueue_block_assets', 'wp_common_block_scripts_and_styles');
-remove_action('enqueue_block_editor_assets', 'wp_enqueue_editor');
+// Disable block editor for custom post types only
+function disable_block_editor_for_cpts($use_block_editor, $post_type) {
+    if (in_array($post_type, ['case_study', 'resource', 'partner'])) {
+        return false;
+    }
+    return $use_block_editor;
+}
+add_filter('use_block_editor_for_post_type', 'disable_block_editor_for_cpts', 10, 2);
+
+// Remove block styles when not needed
 add_action('wp_enqueue_scripts', function() {
-    wp_dequeue_style('wp-block-library');  
-    wp_dequeue_style('wp-block-library-theme'); 
-    wp_dequeue_style('wc-blocks-style'); 
-    wp_dequeue_script('wp-blocks');  
-    wp_dequeue_script('wp-element');  
-    wp_dequeue_script('wp-editor');  
+    if (!has_blocks()) {
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('wp-block-library-theme');
+    }
 }, 100);
 
 
@@ -160,6 +169,8 @@ function sanitize_svg_upload($file) {
             } else {
                 $file['error'] = 'Invalid SVG file.';
             }
+        } else {
+            $file['error'] = 'SVG sanitization not available.';
         }
     }
     return $file;
@@ -179,7 +190,7 @@ if (!function_exists('acf_html')) {
   function acf_html($name, $default = '') {
     $v = get_field($name);
     if (is_string($v)) { $v = trim($v); }
-    return ($v !== null && $v !== '') ? wp_kses_post($v) : $default;
+    return ($v !== null && $v !== '') ? wp_kses_post($v) : wp_kses_post($default);
   }
 }
 
@@ -195,13 +206,17 @@ if (!function_exists('acf_img_src')) {
   function acf_img_src($name, $fallback_src = '') {
     $v = get_field($name);
     if ($v) {
-      return esc_url($v);
+      if (is_array($v) && isset($v['url'])) {
+        return esc_url($v['url']);
+      } elseif (is_string($v)) {
+        return esc_url($v);
+      }
     }
     return $fallback_src ? esc_url($fallback_src) : '';
   }
 }
 
-$fallback_img = get_template_directory_uri() . '/assets/images/fallback.webp';
+
 
 remove_action('wp_head', 'wp_generator');
 add_filter('xmlrpc_enabled', '__return_false');
