@@ -873,7 +873,7 @@
                                 </div>
                             </div>
                             <div class="contact-us-bar">
-                                Looking for something else? <a href="/company/contact"><svg width="20" height="20" role="img" aria-label="mail-02" color="#4411D6">
+                                Looking for something else? <a href="/contact"><svg width="20" height="20" role="img" aria-label="mail-02" color="#4411D6">
                                         <use href="/wp-content/themes/clever/assets/images/sprites.svg#mail-02"></use>
                                     </svg>Contact Us</a>
                             </div>
