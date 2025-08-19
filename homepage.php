@@ -185,9 +185,9 @@ get_header();
               <!-- <img width="150" height="96" src="/wp-content/themes/clever/assets/images/hipaa.svg" alt="HIPAA COMPLIANCE" loading="lazy">
               <img width="95" height="96" src="/wp-content/themes/clever/assets/images/iso.webp" alt="iso" loading="lazy">
               <img width="104" height="96" src="/wp-content/themes/clever/assets/images/aicpa.webp" alt="AICPA" loading="lazy"> -->
-              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img src="'.$cert1.'" alt="Certification 1">'; } ?>
-              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img src="'.$cert2.'" alt="Certification 2">'; } ?>
-              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img src="'.$cert3.'" alt="Certification 3">'; } ?>
+              <?php $cert1 = acf_img_src('certification1', $fallback_img); if ($cert1) { echo '<img width="150" height="96" src="'.$cert1.'" alt="Certification 1">'; } ?>
+              <?php $cert2 = acf_img_src('certification2', $fallback_img); if ($cert2) { echo '<img width="95" height="96" src="'.$cert2.'" alt="Certification 2">'; } ?>
+              <?php $cert3 = acf_img_src('certification3', $fallback_img); if ($cert3) { echo '<img width="104" height="96" src="'.$cert3.'" alt="Certification 3">'; } ?>
             </div>
           </div>
         </div>
