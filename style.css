@@ -876,7 +876,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
 }
 
 .sticky-copy-block p {
-  font-size: 22px;
+  font-size: 18px;
   line-height: 142%;
   color: rgb(52 64 84);
 }
