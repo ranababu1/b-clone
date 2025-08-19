@@ -183,5 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener( 'wpcf7mailsent', function( event ) {
-  location = 'https://clevertask.site/'; 
+  setTimeout(function() {
+    location = 'https://clevertask.site/'; 
+  }, 3000);
 }, false );
