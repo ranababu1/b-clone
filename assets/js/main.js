@@ -187,3 +187,40 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
     location = 'https://clevertask.site/'; 
   }, 3000);
 }, false );
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.querySelector(".resources");
+    if (!section) return;
+    const cards = section.querySelectorAll(".card");
+    if (!cards.length) return;
+    const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    cards.forEach(card => {
+      card.style.opacity = "0";
+      card.style.transition = "opacity 600ms ease";
+      card.style.willChange = "opacity";
+      if (card.dataset.keepTransform !== "1") {
+      }
+    });
+    const reveal = () => {
+      if (prefersReduced) {
+        cards.forEach(card => {
+          card.style.opacity = "1";
+        });
+        return;
+      }
+      cards.forEach((card, i) => {
+        setTimeout(() => {
+          card.style.opacity = "1";
+        }, i * 200); // 200ms stagger
+      });
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          reveal();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+    observer.observe(section);
+  });
