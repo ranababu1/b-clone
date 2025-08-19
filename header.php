@@ -931,7 +931,7 @@
                     </div>
                 </div>
                 <a class="site-header__login" href="https://dashboard.braze.com/developers/sign_in">Log In</a>
-                <a class="site-header__get-started" href="/get-started">Get Started</a>
+                <a class="site-header__get-started" href="/contact">Get Started</a>
 
                 <button class="toggle-sidebar" data-collapse-toggle="toggle-sidebar" type="button" aria-controls="toggle-sidebar" aria-expanded="false">
                     <svg width="34" height="34" viewBox="0 0 100 100">
