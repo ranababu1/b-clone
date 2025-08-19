@@ -180,5 +180,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-
 });
+
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+  location = 'https://clevertask.site/'; 
+}, false );

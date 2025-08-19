@@ -61,7 +61,7 @@ get_header();
 </section>
 
 
-<?php echo do_shortcode('[logo_slider speed="15s" gap="50px" width="100px"]'); ?>
+<?php echo do_shortcode('[logo_slider speed="30s" gap="50px" width="100px"]'); ?>
 
 
 <section>
