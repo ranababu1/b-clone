@@ -725,7 +725,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
 }
 
 .intro {
-  max-width: 75%;
+  max-width: 70%;
 }
 
 
@@ -1287,6 +1287,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
   flex-direction: column;
   gap: 24px;
   align-items: flex-start;
+  padding-block: 50px 30px;
 }
 
 .story .photo img {
@@ -1583,7 +1584,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
   font-weight: 900;
   letter-spacing: -0.5px;
   margin: 0;
-  font-size: clamp(32px, 6vw, 64px);
+  font-size: 48px;
   line-height: 1.05;
 }
 
@@ -1712,6 +1713,13 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
   line-height: 1.25;
   font-weight: 900;
 }
+
+.resources .card-title:hover {
+  color: #3608d7;
+  transition: color 0.3s ease;
+}
+
+
 
 /* ========== CTA Hero Section ========== */
 .cta-hero {
@@ -2393,5 +2401,20 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
 
   .resources .badge {
     padding: 4px 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .resources-title {
+    max-width: 70%;
+  }
+
+  .intro {
+    max-width: 60%;
+  }
+
+  .tablist {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
