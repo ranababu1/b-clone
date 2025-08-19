@@ -212,9 +212,16 @@ if (!function_exists('acf_img_src')) {
         return esc_url($v);
       }
     }
+    // Use global fallback if no specific fallback provided
+    if (!$fallback_src) {
+      global $fallback_img;
+      $fallback_src = $fallback_img;
+    }
     return $fallback_src ? esc_url($fallback_src) : '';
   }
 }
+
+$fallback_img = get_template_directory_uri() . '/assets/images/fallback.webp';
 
 
 
