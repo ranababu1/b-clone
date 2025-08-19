@@ -1853,7 +1853,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
   background-repeat: no-repeat;
   background-size: 250px 250px;
   background-color: rgb(243 177 247);
-  padding: 1.5rem 2rem;
+  padding: .5rem 2rem;
   display: flex;
   gap: 1rem;
   align-items: center;
