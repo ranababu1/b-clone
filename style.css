@@ -1270,7 +1270,7 @@ button[aria-expanded="true"]+.dropdown-menu .dropdown-right-view>* {
   }
 
   #scrollsticky-card-6 {
-    min-height: 300px;
+    /* min-height: 300px; */
   }
 }
 
