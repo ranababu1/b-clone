@@ -2215,4 +2215,10 @@ button[aria-expanded="true"]+.dropdown-menu {
         border-radius: 0;
     }
 
+    .stories .title {
+        font-size: 2.25rem;
+        line-height: 1.22;
+    }
+
+
 }
