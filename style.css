@@ -1158,10 +1158,11 @@ button[aria-expanded="true"]+.dropdown-menu {
   align-items: flex-start;
 }
 
-.story .photo img{
-   transition: transform 0.3s ease;
+.story .photo img {
+  transition: transform 0.3s ease;
 }
-.story:hover .photo img{
+
+.story:hover .photo img {
   transform: scale(105%);
 }
 
@@ -2246,9 +2247,20 @@ button[aria-expanded="true"]+.dropdown-menu {
     padding-top: 50px;
   }
 
-  .slider-heading{
+  .slider-heading {
     font-size: 2.25rem;
-
   }
+
+  #scrollsticky-card-2 .scrollsticky-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .slider-heading {
+    font-size: 2.25rem;
+    letter-spacing: -.02em;
+    line-height: 1.22;
+  }
+
 
 }
