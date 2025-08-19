@@ -537,7 +537,7 @@ get_header();
 
 
         <div class="scrollsticky-card" id="scrollsticky-card-7">
-          <div class="scrollsticky-media">
+          <div class="scrollsticky-media scrollsticky-media--custom">
             <?php 
               $card7_image = get_field('customer_engagement')['card7_image']; 
               if ($card7_image) {
