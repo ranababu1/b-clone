@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="icon" type="image/x-icon" href="/wp-content/themes/clever/assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.cdnfonts.com">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aribau-grotesk-trial" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aribau-grotesk-trial"></noscript>
     <?php wp_head(); ?>
 
 

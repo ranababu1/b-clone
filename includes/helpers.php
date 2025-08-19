@@ -175,6 +175,15 @@ if (!function_exists('acf_text')) {
   }
 }
 
+if (!function_exists('acf_html')) {
+  function acf_html($name, $default = '') {
+    $v = get_field($name);
+    if (is_string($v)) { $v = trim($v); }
+    return ($v !== null && $v !== '') ? wp_kses_post($v) : $default;
+  }
+}
+
+
 if (!function_exists('acf_url')) {
   function acf_url($name, $default = '#') {
     $v = get_field($name);
@@ -194,3 +203,15 @@ if (!function_exists('acf_img_src')) {
 
 $fallback_img = get_template_directory_uri() . '/assets/images/fallback.webp';
 
+remove_action('wp_head', 'wp_generator');
+add_filter('xmlrpc_enabled', '__return_false');
+
+
+
+// Implemented security measures via htaccess
+// Enable XSS Protection
+// Prevent MIME-type sniffing
+// Referrer Policy (Improves privacy)
+// Prevent Clickjacking
+// Strict Transport Security (HSTS)
+// HTTP/3
