@@ -2262,5 +2262,22 @@ button[aria-expanded="true"]+.dropdown-menu {
     line-height: 1.22;
   }
 
+  .slider-section {
+    padding-top: 2.5rem;
+    border-radius: 0;
+  }
+
+  .resources-head {
+    flex-direction: column;
+  }
+
+  .resources .grid {
+    padding-top: 2rem;
+  }
+
+  .resources-blog-btn {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
 
 }
