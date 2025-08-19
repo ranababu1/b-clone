@@ -951,11 +951,11 @@ button[aria-expanded="true"]+.dropdown-menu {
 }
 
 .scrollsticky-media {
-    overflow: hidden;
-    border-radius: calc(var(--card-radius) - 6px);
-    height: 100%;
-    background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
-    width: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--card-radius) - 6px);
+  height: 100%;
+  background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
+  width: 100%;
 }
 
 .scrollsticky-media img {
@@ -2205,20 +2205,33 @@ button[aria-expanded="true"]+.dropdown-menu {
     line-height: 1.22;
   }
 
-  .stories .sub{
+  .stories .sub {
     font-weight: 300;
   }
 
-   .sticky-navbar {
-        margin-inline: -2rem;
-        width: calc(100% + 4rem);
-        border-radius: 0;
-    }
+  .sticky-navbar {
+    margin-inline: -2rem;
+    width: calc(100% + 4rem);
+    border-radius: 0;
+  }
 
-    .stories .title {
-        font-size: 2.25rem;
-        line-height: 1.22;
-    }
+  .stories .title {
+    font-size: 2.25rem;
+    line-height: 1.22;
+  }
 
+  .products-section-header {
+    font-size: 34px;
+    padding: 50px 0 0 0;
+    text-align: left;
+  }
+
+  .product-section-para {
+    text-align: left;
+  }
+
+  .sticky-copy-block {
+    padding-top: 50px;
+  }
 
 }
