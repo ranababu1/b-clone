@@ -951,10 +951,11 @@ button[aria-expanded="true"]+.dropdown-menu {
 }
 
 .scrollsticky-media {
-  overflow: hidden;
-  border-radius: calc(var(--card-radius) - 6px);
-  height: 100%;
-  background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
+    overflow: hidden;
+    border-radius: calc(var(--card-radius) - 6px);
+    height: 100%;
+    background-image: url(/wp-content/themes/clever/assets/images/bento-card-bg.svg);
+    width: 100%;
 }
 
 .scrollsticky-media img {
